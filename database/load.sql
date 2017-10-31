@@ -1,1 +1,1 @@
-\COPY School(name,size,rank,tuition) FROM 'data/school' WITH DELIMETER ',' NULL '' CSV
+\COPY School(name,size,rank,tuition) FROM 'data/school.csv' WITH DELIMITER ',' NULL '' CSV

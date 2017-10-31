@@ -1,12 +1,11 @@
-Name,Size,Rank,Tuition
-Duke University,6501,,63999
-Appalachian State University,16126,,19359
-Davidson College,1779,,60921
-East Carolina University,21697,,21040
-Elon University,5903,,45186
-High Point University,4362,,46710
-University of North Carolina at Chapel Hill,17951,,23940
-University of North Carolina Wilmington,12971,,21050
-Wake Forest University,4866,,62502
-University of North Carolina at Greensboro,15158,,18357
-Queens University of Charlotte,1551,,46333
+Duke University,6501,9,63999
+Appalachian State University,16126,9,19359
+Davidson College,1779,10,60921
+East Carolina University,21697,207,21040
+Elon University,5903,1,45186
+High Point University,4362,1,46710
+University of North Carolina at Chapel Hill,17951,30,23940
+University of North Carolina Wilmington,12971,14,21050
+Wake Forest University,4866,27,62502
+University of North Carolina at Greensboro,15158,198,18357
+Queens University of Charlotte,1551,20,46333
