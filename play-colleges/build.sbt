@@ -1,4 +1,4 @@
-name := """play-beers"""
+name := """play-colleges"""
 organization := "edu.duke.dbcourse"
 
 version := "1.0-SNAPSHOT"
