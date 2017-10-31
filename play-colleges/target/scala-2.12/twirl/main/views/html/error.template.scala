@@ -34,7 +34,7 @@ Seq[Any](format.raw/*1.19*/("""
 
 """),_display_(/*3.2*/main("Error")/*3.15*/ {_display_(Seq[Any](format.raw/*3.17*/(""" """)))}/*3.19*/ {_display_(Seq[Any](format.raw/*3.21*/("""
   """),format.raw/*4.3*/("""<p>"""),_display_(/*4.7*/message),format.raw/*4.14*/(""".</p>
-  <p>Go back to <a href=""""),_display_(/*5.27*/routes/*5.33*/.Application.index()),format.raw/*5.53*/("""">all drinkers</a>.</p>
+  <p>Go back to <a href=""""),_display_(/*5.27*/routes/*5.33*/.Application.index()),format.raw/*5.53*/("""">all schools</a>.</p>
 """)))}),format.raw/*6.2*/("""
 """))
       }
@@ -52,10 +52,10 @@ Seq[Any](format.raw/*1.19*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Oct 17 14:38:47 EDT 2017
-                  SOURCE: /vagrant/play-beers/app/views/error.scala.html
-                  HASH: 83adfc400caf2459e1a0049272fbc4bc43db3952
-                  MATRIX: 948->1|1060->18|1088->21|1109->34|1148->36|1168->38|1207->40|1236->43|1265->47|1292->54|1350->86|1364->92|1404->112|1458->137
+                  DATE: Tue Oct 31 16:30:10 EDT 2017
+                  SOURCE: /vagrant/316_project/play-colleges/app/views/error.scala.html
+                  HASH: cf569900301a01e4d71a97ec2175a1695d702fc4
+                  MATRIX: 948->1|1060->18|1088->21|1109->34|1148->36|1168->38|1207->40|1236->43|1265->47|1292->54|1350->86|1364->92|1404->112|1457->136
                   LINES: 28->1|33->1|35->3|35->3|35->3|35->3|35->3|36->4|36->4|36->4|37->5|37->5|37->5|38->6
                   -- GENERATED --
               */

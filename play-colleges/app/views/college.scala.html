@@ -1,0 +1,11 @@
+@(schoolInfo: models.collegesDB.SchoolInfo)
+
+@main("School Information: " + schoolInfo.name) { } {
+  <p>
+    Size: @schoolInfo.size<br/>
+    Rank: @schoolInfo.rank<br/>
+    Tuition: @schoolInfo.tuition<br/>
+    <br/>
+    See <a href="@routes.Application.index()">all schools</a>.
+  </p>
+}

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/vagrant/play-beers/conf/routes
-// @DATE:Tue Oct 17 14:38:47 EDT 2017
+// @SOURCE:/vagrant/316_project/play-colleges/conf/routes
+// @DATE:Tue Oct 31 16:30:09 EDT 2017
 
 package controllers;
 

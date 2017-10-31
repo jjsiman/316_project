@@ -1,3 +1,10 @@
 playUpdateSecret
 run
 exit
+run
+quit
+exit
+sbt
+run
+exit
+run
