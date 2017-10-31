@@ -11,7 +11,7 @@ import play.data.*;
 
 import views.html.*;
 
-import models.BeerDB;
+import models.collegesDB;
 
 public class Application extends Controller {
     @Inject
@@ -25,6 +25,11 @@ public class Application extends Controller {
 
     public Result viewSchool(String name) throws SQLException {
       collegesDB.SchoolInfo schoolInfo = collegesDB.getSchoolInfo(name);
+      if (schoolInfo == null) {
+        return ok(error.render("No school named \"" + name + "\""));
+      } else {
+        return ok(college.render(schoolInfo));
+      }
     }
     //
     // public Result viewDrinker(String name) throws SQLException {

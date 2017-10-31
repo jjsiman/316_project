@@ -1,7 +1,7 @@
-@(drinkers: List[String])
+@(school: List[String])
 
-@main("All Drinkers") { } {
-  <p>Click on drinker below to view more information:
+@main("All Schools") { } {
+  <p>Click on a school below to view more information:
     <ul>
       @for(name <- school) {
         <li><a href="@routes.Application.viewSchool(name)">@name</a></li>

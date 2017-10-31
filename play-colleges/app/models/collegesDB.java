@@ -11,12 +11,12 @@ public class collegesDB {
 
     public static class SchoolInfo {
         public String name = null;
-        public int size = null;
-        public int rank = null;
-        public int tuition = null;
+        public int size;
+        public int rank;
+        public int tuition;
         public SchoolInfo() {
         }
-        public SchoolInfo(String name,int size,int rank,int tuition,) {
+        public SchoolInfo(String name,int size,int rank,int tuition) {
             this.name = name;
             this.size = size;
             this.rank = rank;
@@ -38,7 +38,7 @@ public class collegesDB {
       try {
         connection = db.getConnection();
         Statement statement = connection.createStatement();
-        ResultSet rs = statement.executeQuery("SELECT name FROM " + table + "ORDER BY name");
+        ResultSet rs = statement.executeQuery("SELECT name FROM " + table + " ORDER BY name");
         while (rs.next()) {
           String name = rs.getString(1);
           names.add(name);
@@ -60,7 +60,7 @@ public class collegesDB {
       return getAllNames("School");
     }
 
-    public schoolInfo getSchoolInfo(name) throws SQLException {
+    public SchoolInfo getSchoolInfo(String name) throws SQLException {
       Connection connection = null;
       SchoolInfo schoolInfo = null;
       try {
@@ -89,13 +89,13 @@ public class collegesDB {
         statement.close();
         // retrieve tuition:
         statement = connection
-        .prepareStatement("SELECT tuition FROM School WHERE drinker = ?");
+        .prepareStatement("SELECT tuition FROM School WHERE name = ?");
         statement.setString(1, name);
         rs = statement.executeQuery();
         if (! rs.next()) {
           return null;
         }
-        int tuiton = rs.getInt(1);
+        int tuition = rs.getInt(1);
         rs.close();
         statement.close();
         schoolInfo = new SchoolInfo(name, size, rank, tuition);

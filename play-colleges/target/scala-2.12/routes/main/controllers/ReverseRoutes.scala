@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/vagrant/play-beers/conf/routes
-// @DATE:Tue Oct 17 14:38:47 EDT 2017
+// @SOURCE:/vagrant/316_project/play-colleges/conf/routes
+// @DATE:Tue Oct 31 16:30:09 EDT 2017
 
 import play.api.mvc.Call
 
@@ -40,22 +40,10 @@ package controllers {
       Call("GET", _prefix)
     }
   
-    // @LINE:7
-    def editDrinker(name:String): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "edit-drinker/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("name", name)))
-    }
-  
-    // @LINE:8
-    def updateDrinker(): Call = {
-      
-      Call("POST", _prefix + { _defaultPrefix } + "update-drinker")
-    }
-  
     // @LINE:6
-    def viewDrinker(name:String): Call = {
+    def viewSchool(name:String): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "drinker/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("name", name)))
+      Call("GET", _prefix + { _defaultPrefix } + "School/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("name", name)))
     }
   
   }
