@@ -1,0 +1,24 @@
+@(drinkerInfo: models.BeerDB.DrinkerInfo)
+
+@main("Drinker Information: " + drinkerInfo.name) { } {
+  <p>
+    Address: @drinkerInfo.address<br/>
+    @drinkerInfo.beersLiked.size
+    @if(drinkerInfo.beersLiked.size > 1) {beers} else {beer}
+    liked:
+    @for(i <- 0 until drinkerInfo.beersLiked.size) {@if(i > 0) {,}
+      @drinkerInfo.beersLiked(i)}<br/>
+    @drinkerInfo.barsFrequented.size
+    @if(drinkerInfo.barsFrequented.size > 1) {bars} else {bar}
+    frequented:
+    @for(i <- 0 until drinkerInfo.barsFrequented.size) {@if(i > 0) {,}
+      @drinkerInfo.barsFrequented(i)
+      (@drinkerInfo.timesFrequented(i)
+       @if(drinkerInfo.timesFrequented(i) > 1) {times} else {time}
+       a week)}<br/>
+    <br/>
+    <a href="@routes.Application.editDrinker(drinkerInfo.name)">Edit</a>
+    this information or see
+    <a href="@routes.Application.index()">all drinkers</a>.
+  </p>
+}

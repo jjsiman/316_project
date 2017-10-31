@@ -1,0 +1,22 @@
+@(heading: String)(script: Html)(content: Html)
+
+<!DOCTYPE html>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Play/Java DB-Beers Example</title>
+    <meta name="description" content="A sample Play/Java website for db-beers"/>
+    <meta name="keywords" content="play, java, db-beers"/>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/main.css")" type="text/css" media="screen"/>
+    @script
+  </head>
+  <body>
+    <h1><img src="@routes.Assets.at("images/beer.jpg")" style="float:right"/>Play/Java DB-Beers Example</h1>
+    <hr/>
+    <h2 id="heading">@heading</h2>
+    <div id="content">@content</div>
+    <hr/>
+  </body>
+</html>

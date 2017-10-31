@@ -1,0 +1,30 @@
+@(drinkerInfo: models.BeerDB.DrinkerInfo,
+  beers: List[String], bars: List[String])
+
+@main("Edit Drinker Information: " + drinkerInfo.name) { } {
+  <form method="post" action="@routes.Application.updateDrinker()">
+    @helper.CSRF.formField
+    <input type="hidden" name="name" value="@drinkerInfo.name"/>
+    Address: <input type="text" name="address" value="@drinkerInfo.address"
+                    size="20" maxlength="20"/><br/>
+    Beer(s) liked:
+    @for(beer <- beers) {
+      <input type="checkbox" name="BeersLiked/@beer" value="1"
+             @if(drinkerInfo.beersLiked.contains(beer)) {checked}/>@beer
+    }<br/>
+    Bar(s) frequented (times a week):
+    <ul>
+    @for(bar <- bars) {
+    <li>@bar <input type="text" name="BarsFrequented/@bar"
+                    @if(drinkerInfo.barsFrequented.contains(bar)) {
+                      value="@drinkerInfo.timesFrequented(drinkerInfo.barsFrequented.indexOf(bar))"
+                    } else {
+                      value="0"
+                    }
+                    size="1" maxlength="2"/></li>
+    }
+    </ul>
+    <input type="reset" value="Reset"/>
+    <input type="submit" value="Submit Update"/>
+  </form>
+}

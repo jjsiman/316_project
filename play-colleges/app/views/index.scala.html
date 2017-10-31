@@ -1,0 +1,11 @@
+@(drinkers: List[String])
+
+@main("All Drinkers") { } {
+  <p>Click on drinker below to view more information:
+    <ul>
+      @for(name <- drinkers) {
+        <li><a href="@routes.Application.viewDrinker(name)">@name</a></li>
+      }
+    </ul>
+  </p>
+}
