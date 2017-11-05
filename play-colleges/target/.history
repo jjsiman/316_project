@@ -8,3 +8,15 @@ sbt
 run
 exit
 run
+exit
+run
+exit
+playUpdateSecret
+run
+last compile:run
+exit
+run
+exit
+run
+exit
+run

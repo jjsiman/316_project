@@ -68,7 +68,7 @@ Seq[Any](format.raw/*1.48*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Oct 31 16:30:10 EDT 2017
+                  DATE: Tue Oct 31 17:44:51 EDT 2017
                   SOURCE: /vagrant/316_project/play-colleges/app/views/main.scala.html
                   HASH: 80b68c3795d4a518b6e681dae8ea1ab129dcd840
                   MATRIX: 957->1|1098->47|1126->49|1634->530|1649->536|1704->570|1770->610|1797->616|1827->619|1890->655|1905->661|1955->690|2072->780|2100->787|2156->816|2184->823

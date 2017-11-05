@@ -33,12 +33,12 @@ object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
 Seq[Any](format.raw/*1.24*/("""
 
 """),_display_(/*3.2*/main("All Schools")/*3.21*/ {_display_(Seq[Any](format.raw/*3.23*/(""" """)))}/*3.25*/ {_display_(Seq[Any](format.raw/*3.27*/("""
-  """),format.raw/*4.3*/("""<p>Click on a school below to view more information:
-    <ul>
-      """),_display_(/*6.8*/for(name <- school) yield /*6.27*/ {_display_(Seq[Any](format.raw/*6.29*/("""
-        """),format.raw/*7.9*/("""<li><a href=""""),_display_(/*7.23*/routes/*7.29*/.Application.viewSchool(name)),format.raw/*7.58*/("""">"""),_display_(/*7.61*/name),format.raw/*7.65*/("""</a></li>
-      """)))}),format.raw/*8.8*/("""
-    """),format.raw/*9.5*/("""</ul>
+  """),format.raw/*4.3*/("""<p>Search for a school:
+  <form method="post" action=""""),_display_(/*5.32*/routes/*5.38*/.Application.viewSchoolSearch()),format.raw/*5.69*/("""">
+    """),_display_(/*6.6*/helper/*6.12*/.CSRF.formField),format.raw/*6.27*/("""
+    """),format.raw/*7.5*/("""<input type="text" name="name" placeholder="School name"><br/>
+    <input type="submit" value="Go!"/>
+  </form>
   </p>
 """)))}),format.raw/*11.2*/("""
 """))
@@ -57,11 +57,11 @@ Seq[Any](format.raw/*1.24*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Oct 31 16:32:52 EDT 2017
+                  DATE: Sun Nov 05 14:08:44 EST 2017
                   SOURCE: /vagrant/316_project/play-colleges/app/views/index.scala.html
-                  HASH: c26c0679920f276511729b43eb57b50749e54f12
-                  MATRIX: 954->1|1071->23|1099->26|1126->45|1165->47|1185->49|1224->51|1253->54|1347->123|1381->142|1420->144|1455->153|1495->167|1509->173|1558->202|1587->205|1611->209|1657->226|1688->231|1732->245
-                  LINES: 28->1|33->1|35->3|35->3|35->3|35->3|35->3|36->4|38->6|38->6|38->6|39->7|39->7|39->7|39->7|39->7|39->7|40->8|41->9|43->11
+                  HASH: 08e3f468ed5355538ce8184897407334976c926c
+                  MATRIX: 954->1|1071->23|1099->26|1126->45|1165->47|1185->49|1224->51|1253->54|1334->109|1348->115|1399->146|1432->154|1446->160|1481->175|1512->180|1662->300
+                  LINES: 28->1|33->1|35->3|35->3|35->3|35->3|35->3|36->4|37->5|37->5|37->5|38->6|38->6|38->6|39->7|43->11
                   -- GENERATED --
               */
           

@@ -31,6 +31,12 @@ public class Application extends Controller {
         return ok(college.render(schoolInfo));
       }
     }
+
+    public Result viewSchoolSearch() throws SQLException {
+      Map<String,String> data = formFactory.form().bindFromRequest().data();
+      String name = data.get("name");
+      return redirect(controllers.routes.Application.viewSchool(name));
+    }
     //
     // public Result viewDrinker(String name) throws SQLException {
     //     BeerDB.DrinkerInfo drinkerInfo = beerDB.getDrinkerInfo(name);
