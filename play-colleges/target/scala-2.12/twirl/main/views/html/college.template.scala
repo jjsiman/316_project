@@ -22,15 +22,15 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object college extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[models.collegesDB.SchoolInfo,play.twirl.api.HtmlFormat.Appendable] {
+object college extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[models.collegesDB.SchoolInfo,List[String],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(schoolInfo: models.collegesDB.SchoolInfo):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(schoolInfo: models.collegesDB.SchoolInfo, similarSchools: List[String]):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.44*/("""
+Seq[Any](format.raw/*1.74*/("""
 
 """),_display_(/*3.2*/main("School Information: " + schoolInfo.name)/*3.48*/ {_display_(Seq[Any](format.raw/*3.50*/(""" """)))}/*3.52*/ {_display_(Seq[Any](format.raw/*3.54*/("""
   """),format.raw/*4.3*/("""<p>
@@ -38,17 +38,25 @@ Seq[Any](format.raw/*1.44*/("""
     Rank: """),_display_(/*6.12*/schoolInfo/*6.22*/.rank),format.raw/*6.27*/("""<br/>
     Tuition: """),_display_(/*7.15*/schoolInfo/*7.25*/.tuition),format.raw/*7.33*/("""<br/>
     <br/>
-    See <a href=""""),_display_(/*9.19*/routes/*9.25*/.Application.index()),format.raw/*9.45*/("""">all schools</a>.
   </p>
-""")))}),format.raw/*11.2*/("""
+  <p>
+      """),_display_(/*11.8*/for(name <- similarSchools) yield /*11.35*/ {_display_(Seq[Any](format.raw/*11.37*/("""
+        """),format.raw/*12.9*/("""<li> <a href=""""),_display_(/*12.24*/routes/*12.30*/.Application.viewSchool(name)),format.raw/*12.59*/(""""> """),_display_(/*12.63*/name),format.raw/*12.67*/(""" """),format.raw/*12.68*/("""</a> </li>
+      """)))}),format.raw/*13.8*/("""
+  """),format.raw/*14.3*/("""</p>
+
+  <p>
+    Search <a href=""""),_display_(/*17.22*/routes/*17.28*/.Application.index()),format.raw/*17.48*/("""">other schools</a>.
+  </p>
+""")))}),format.raw/*19.2*/("""
 """))
       }
     }
   }
 
-  def render(schoolInfo:models.collegesDB.SchoolInfo): play.twirl.api.HtmlFormat.Appendable = apply(schoolInfo)
+  def render(schoolInfo:models.collegesDB.SchoolInfo,similarSchools:List[String]): play.twirl.api.HtmlFormat.Appendable = apply(schoolInfo,similarSchools)
 
-  def f:((models.collegesDB.SchoolInfo) => play.twirl.api.HtmlFormat.Appendable) = (schoolInfo) => apply(schoolInfo)
+  def f:((models.collegesDB.SchoolInfo,List[String]) => play.twirl.api.HtmlFormat.Appendable) = (schoolInfo,similarSchools) => apply(schoolInfo,similarSchools)
 
   def ref: this.type = this
 
@@ -57,11 +65,11 @@ Seq[Any](format.raw/*1.44*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Oct 31 16:47:17 EDT 2017
-                  SOURCE: /vagrant/316_project/play-colleges/app/views/college.scala.html
-                  HASH: 312519c0dba19ec61af771d611481f4189b1f3b7
-                  MATRIX: 972->1|1109->43|1137->46|1191->92|1230->94|1250->96|1289->98|1318->101|1359->116|1377->126|1402->131|1445->148|1463->158|1488->163|1534->183|1552->193|1580->201|1640->235|1654->241|1694->261|1751->288
-                  LINES: 28->1|33->1|35->3|35->3|35->3|35->3|35->3|36->4|37->5|37->5|37->5|38->6|38->6|38->6|39->7|39->7|39->7|41->9|41->9|41->9|43->11
+                  DATE: Sun Nov 05 15:32:21 EST 2017
+                  SOURCE: /vagrant/project/316_project/play-colleges/app/views/college.scala.html
+                  HASH: d9c7b237f8d4e16b8e3e5bb6345d9b59cde796de
+                  MATRIX: 985->1|1152->73|1180->76|1234->122|1273->124|1293->126|1332->128|1361->131|1402->146|1420->156|1445->161|1488->178|1506->188|1531->193|1577->213|1595->223|1623->231|1685->267|1728->294|1768->296|1804->305|1846->320|1861->326|1911->355|1942->359|1967->363|1996->364|2044->382|2074->385|2134->418|2149->424|2190->444|2249->473
+                  LINES: 28->1|33->1|35->3|35->3|35->3|35->3|35->3|36->4|37->5|37->5|37->5|38->6|38->6|38->6|39->7|39->7|39->7|43->11|43->11|43->11|44->12|44->12|44->12|44->12|44->12|44->12|44->12|45->13|46->14|49->17|49->17|49->17|51->19
                   -- GENERATED --
               */
           

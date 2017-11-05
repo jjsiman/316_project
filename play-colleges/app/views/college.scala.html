@@ -1,4 +1,4 @@
-@(schoolInfo: models.collegesDB.SchoolInfo)
+@(schoolInfo: models.collegesDB.SchoolInfo, similarSchools: List[String])
 
 @main("School Information: " + schoolInfo.name) { } {
   <p>
@@ -6,6 +6,14 @@
     Rank: @schoolInfo.rank<br/>
     Tuition: @schoolInfo.tuition<br/>
     <br/>
+  </p>
+  <p>
+      @for(name <- similarSchools) {
+        <li> <a href="@routes.Application.viewSchool(name)"> @name </a> </li>
+      }
+  </p>
+
+  <p>
     Search <a href="@routes.Application.index()">other schools</a>.
   </p>
 }
