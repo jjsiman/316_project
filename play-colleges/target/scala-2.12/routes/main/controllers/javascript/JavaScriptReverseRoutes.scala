@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/vagrant/316_project/play-colleges/conf/routes
-// @DATE:Sun Nov 05 13:52:04 EST 2017
+// @SOURCE:/vagrant/project/316_project/play-colleges/conf/routes
+// @DATE:Sun Nov 05 14:40:55 EST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 

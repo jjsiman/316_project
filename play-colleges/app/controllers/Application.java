@@ -25,10 +25,11 @@ public class Application extends Controller {
 
     public Result viewSchool(String name) throws SQLException {
       collegesDB.SchoolInfo schoolInfo = collegesDB.getSchoolInfo(name);
+      ArrayList<String> similarSchools = collegesDB.getSimilarSchoolInfo(name);
       if (schoolInfo == null) {
         return ok(error.render("No school named \"" + name + "\""));
       } else {
-        return ok(college.render(schoolInfo));
+        return ok(college.render(schoolInfo, similarSchools));
       }
     }
 
@@ -37,6 +38,8 @@ public class Application extends Controller {
       String name = data.get("name");
       return redirect(controllers.routes.Application.viewSchool(name));
     }
+
+
     //
     // public Result viewDrinker(String name) throws SQLException {
     //     BeerDB.DrinkerInfo drinkerInfo = beerDB.getDrinkerInfo(name);

@@ -4,7 +4,12 @@
   <p>Search for a school:
   <form method="post" action="@routes.Application.viewSchoolSearch()">
     @helper.CSRF.formField
-    <input type="text" name="name" placeholder="School name"><br/>
+    <input list="schools" type="text" name="name" placeholder="School name"><br/>
+      <datalist id="schools">
+        @for(name <- school) {
+          <option value="@name"> <a href="@routes.Application.viewSchool(name)"> @name </a> </option>
+        }
+      </datalist>
     <input type="submit" value="Go!"/>
   </form>
   </p>

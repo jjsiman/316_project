@@ -36,11 +36,16 @@ Seq[Any](format.raw/*1.24*/("""
   """),format.raw/*4.3*/("""<p>Search for a school:
   <form method="post" action=""""),_display_(/*5.32*/routes/*5.38*/.Application.viewSchoolSearch()),format.raw/*5.69*/("""">
     """),_display_(/*6.6*/helper/*6.12*/.CSRF.formField),format.raw/*6.27*/("""
-    """),format.raw/*7.5*/("""<input type="text" name="name" placeholder="School name"><br/>
+    """),format.raw/*7.5*/("""<input list="schools" type="text" name="name" placeholder="School name"><br/>
+      <datalist id="schools">
+        """),_display_(/*9.10*/for(name <- school) yield /*9.29*/ {_display_(Seq[Any](format.raw/*9.31*/("""
+          """),format.raw/*10.11*/("""<option value=""""),_display_(/*10.27*/name),format.raw/*10.31*/(""""> <a href=""""),_display_(/*10.44*/routes/*10.50*/.Application.viewSchool(name)),format.raw/*10.79*/(""""> """),_display_(/*10.83*/name),format.raw/*10.87*/(""" """),format.raw/*10.88*/("""</a> </option>
+        """)))}),format.raw/*11.10*/("""
+      """),format.raw/*12.7*/("""</datalist>
     <input type="submit" value="Go!"/>
   </form>
   </p>
-""")))}),format.raw/*11.2*/("""
+""")))}),format.raw/*16.2*/("""
 """))
       }
     }
@@ -57,11 +62,11 @@ Seq[Any](format.raw/*1.24*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sun Nov 05 14:08:44 EST 2017
-                  SOURCE: /vagrant/316_project/play-colleges/app/views/index.scala.html
-                  HASH: 08e3f468ed5355538ce8184897407334976c926c
-                  MATRIX: 954->1|1071->23|1099->26|1126->45|1165->47|1185->49|1224->51|1253->54|1334->109|1348->115|1399->146|1432->154|1446->160|1481->175|1512->180|1662->300
-                  LINES: 28->1|33->1|35->3|35->3|35->3|35->3|35->3|36->4|37->5|37->5|37->5|38->6|38->6|38->6|39->7|43->11
+                  DATE: Sun Nov 05 15:32:21 EST 2017
+                  SOURCE: /vagrant/project/316_project/play-colleges/app/views/index.scala.html
+                  HASH: 2934f1b3f87b3918e6678dcc65211c528a24b43c
+                  MATRIX: 954->1|1071->23|1099->26|1126->45|1165->47|1185->49|1224->51|1253->54|1334->109|1348->115|1399->146|1432->154|1446->160|1481->175|1512->180|1655->297|1689->316|1728->318|1767->329|1810->345|1835->349|1875->362|1890->368|1940->397|1971->401|1996->405|2025->406|2080->430|2114->437|2213->506
+                  LINES: 28->1|33->1|35->3|35->3|35->3|35->3|35->3|36->4|37->5|37->5|37->5|38->6|38->6|38->6|39->7|41->9|41->9|41->9|42->10|42->10|42->10|42->10|42->10|42->10|42->10|42->10|42->10|43->11|44->12|48->16
                   -- GENERATED --
               */
           
