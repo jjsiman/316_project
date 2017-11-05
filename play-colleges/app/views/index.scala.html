@@ -1,11 +1,11 @@
 @(school: List[String])
 
 @main("All Schools") { } {
-  <p>Click on a school below to view more information:
-    <ul>
-      @for(name <- school) {
-        <li><a href="@routes.Application.viewSchool(name)">@name</a></li>
-      }
-    </ul>
+  <p>Search for a school:
+  <form method="post" action="@routes.Application.viewSchoolSearch()">
+    @helper.CSRF.formField
+    <input type="text" name="name" placeholder="School name"><br/>
+    <input type="submit" value="Go!"/>
+  </form>
   </p>
 }

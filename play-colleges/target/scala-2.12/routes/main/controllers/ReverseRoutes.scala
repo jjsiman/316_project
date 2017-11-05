@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/vagrant/316_project/play-colleges/conf/routes
-// @DATE:Tue Oct 31 16:30:09 EDT 2017
+// @DATE:Sun Nov 05 13:52:04 EST 2017
 
 import play.api.mvc.Call
 
@@ -12,14 +12,14 @@ import _root_.play.libs.F
 // @LINE:5
 package controllers {
 
-  // @LINE:11
+  // @LINE:12
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:11
+    // @LINE:12
     def at(file:String): Call = {
       implicit val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public")))
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[String]].unbind("file", file))
@@ -38,6 +38,12 @@ package controllers {
     def index(): Call = {
       
       Call("GET", _prefix)
+    }
+  
+    // @LINE:9
+    def viewSchoolSearch(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "search-school")
     }
   
     // @LINE:6

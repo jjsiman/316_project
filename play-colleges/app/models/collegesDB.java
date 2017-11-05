@@ -10,7 +10,8 @@ import java.util.ArrayList;
 public class collegesDB {
 
     public static class SchoolInfo {
-        public String name = null;
+        public String name;
+
         public int size;
         public int rank;
         public int tuition;
