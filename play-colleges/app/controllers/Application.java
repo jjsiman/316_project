@@ -25,11 +25,12 @@ public class Application extends Controller {
 
     public Result viewSchool(String name) throws SQLException {
       collegesDB.SchoolInfo schoolInfo = collegesDB.getSchoolInfo(name);
-      ArrayList<String> similarSchools = collegesDB.getSimilarSchoolInfo(name);
+      ArrayList<String> similarSizeSchools = collegesDB.getSimilarSizeSchoolInfo(name);
+      ArrayList<String> similarTuitionSchools = collegesDB.getSimilarTuitionSchoolInfo(name);
       if (schoolInfo == null) {
         return ok(error.render("No school named \"" + name + "\""));
       } else {
-        return ok(college.render(schoolInfo, similarSchools));
+        return ok(college.render(schoolInfo, similarSizeSchools, similarTuitionSchools));
       }
     }
 

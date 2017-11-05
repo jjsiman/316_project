@@ -111,7 +111,7 @@ public class collegesDB {
       return schoolInfo;
     }
 
-    public ArrayList<String> getSimilarSchoolInfo(String name) throws SQLException {
+    public ArrayList<String> getSimilarSizeSchoolInfo(String name) throws SQLException {
         Connection connection = null;
         SchoolInfo schoolInfo = null;
         ArrayList<String> similarSchools = new ArrayList<String>();
@@ -120,6 +120,34 @@ public class collegesDB {
           // retrieve similar in size:
           PreparedStatement statement = connection
           .prepareStatement("SELECT s2.name FROM school s1 JOIN school s2 ON s1.name <> s2.name WHERE s1.name = ? AND ABS(s1.size - s2.size) < 2000");
+          statement.setString(1, name);
+          ResultSet rs = statement.executeQuery();
+          while (rs.next()) {
+            String school = rs.getString(1);
+            similarSchools.add(school);
+            }
+          rs.close();
+          statement.close();
+
+        } finally {
+          if (connection != null) {
+            try {
+              connection.close();
+            } catch (Exception e) {
+            }
+          }
+        }
+        return similarSchools;
+    }
+    public ArrayList<String> getSimilarTuitionSchoolInfo(String name) throws SQLException {
+        Connection connection = null;
+        SchoolInfo schoolInfo = null;
+        ArrayList<String> similarSchools = new ArrayList<String>();
+        try {
+          connection = db.getConnection();
+          // retrieve similar in size:
+          PreparedStatement statement = connection
+          .prepareStatement("SELECT s2.name FROM school s1 JOIN school s2 ON s1.name <> s2.name WHERE s1.name = ? AND ABS(s1.tuition - s2.tuition) < 5000;");
           statement.setString(1, name);
           ResultSet rs = statement.executeQuery();
           while (rs.next()) {

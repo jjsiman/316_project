@@ -22,15 +22,15 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object college extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[models.collegesDB.SchoolInfo,List[String],play.twirl.api.HtmlFormat.Appendable] {
+object college extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template3[models.collegesDB.SchoolInfo,List[String],List[String],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(schoolInfo: models.collegesDB.SchoolInfo, similarSchools: List[String]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(schoolInfo: models.collegesDB.SchoolInfo, similarSizedSchools: List[String],similarTuitionSchools: List[String]):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.74*/("""
+Seq[Any](format.raw/*1.115*/("""
 
 """),_display_(/*3.2*/main("School Information: " + schoolInfo.name)/*3.48*/ {_display_(Seq[Any](format.raw/*3.50*/(""" """)))}/*3.52*/ {_display_(Seq[Any](format.raw/*3.54*/("""
   """),format.raw/*4.3*/("""<p>
@@ -40,23 +40,29 @@ Seq[Any](format.raw/*1.74*/("""
     <br/>
   </p>
   <p>
-      """),_display_(/*11.8*/for(name <- similarSchools) yield /*11.35*/ {_display_(Seq[Any](format.raw/*11.37*/("""
-        """),format.raw/*12.9*/("""<li> <a href=""""),_display_(/*12.24*/routes/*12.30*/.Application.viewSchool(name)),format.raw/*12.59*/(""""> """),_display_(/*12.63*/name),format.raw/*12.67*/(""" """),format.raw/*12.68*/("""</a> </li>
-      """)))}),format.raw/*13.8*/("""
-  """),format.raw/*14.3*/("""</p>
-
+      Check out these schools with similar sizes!
+      """),_display_(/*12.8*/for(name <- similarSizedSchools) yield /*12.40*/ {_display_(Seq[Any](format.raw/*12.42*/("""
+        """),format.raw/*13.9*/("""<li> <a href=""""),_display_(/*13.24*/routes/*13.30*/.Application.viewSchool(name)),format.raw/*13.59*/(""""> """),_display_(/*13.63*/name),format.raw/*13.67*/(""" """),format.raw/*13.68*/("""</a> </li>
+      """)))}),format.raw/*14.8*/("""
+  """),format.raw/*15.3*/("""</p>
   <p>
-    Search <a href=""""),_display_(/*17.22*/routes/*17.28*/.Application.index()),format.raw/*17.48*/("""">other schools</a>.
+      Check out these schools with similar tuition!
+      """),_display_(/*18.8*/for(name <- similarTuitionSchools) yield /*18.42*/ {_display_(Seq[Any](format.raw/*18.44*/("""
+        """),format.raw/*19.9*/("""<li> <a href=""""),_display_(/*19.24*/routes/*19.30*/.Application.viewSchool(name)),format.raw/*19.59*/(""""> """),_display_(/*19.63*/name),format.raw/*19.67*/(""" """),format.raw/*19.68*/("""</a> </li>
+      """)))}),format.raw/*20.8*/("""
+  """),format.raw/*21.3*/("""</p>
+  <p>
+    Search <a href=""""),_display_(/*23.22*/routes/*23.28*/.Application.index()),format.raw/*23.48*/("""">other schools</a>.
   </p>
-""")))}),format.raw/*19.2*/("""
+""")))}),format.raw/*25.2*/("""
 """))
       }
     }
   }
 
-  def render(schoolInfo:models.collegesDB.SchoolInfo,similarSchools:List[String]): play.twirl.api.HtmlFormat.Appendable = apply(schoolInfo,similarSchools)
+  def render(schoolInfo:models.collegesDB.SchoolInfo,similarSizedSchools:List[String],similarTuitionSchools:List[String]): play.twirl.api.HtmlFormat.Appendable = apply(schoolInfo,similarSizedSchools,similarTuitionSchools)
 
-  def f:((models.collegesDB.SchoolInfo,List[String]) => play.twirl.api.HtmlFormat.Appendable) = (schoolInfo,similarSchools) => apply(schoolInfo,similarSchools)
+  def f:((models.collegesDB.SchoolInfo,List[String],List[String]) => play.twirl.api.HtmlFormat.Appendable) = (schoolInfo,similarSizedSchools,similarTuitionSchools) => apply(schoolInfo,similarSizedSchools,similarTuitionSchools)
 
   def ref: this.type = this
 
@@ -65,11 +71,11 @@ Seq[Any](format.raw/*1.74*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sun Nov 05 15:32:21 EST 2017
-                  SOURCE: /vagrant/project/316_project/play-colleges/app/views/college.scala.html
-                  HASH: d9c7b237f8d4e16b8e3e5bb6345d9b59cde796de
-                  MATRIX: 985->1|1152->73|1180->76|1234->122|1273->124|1293->126|1332->128|1361->131|1402->146|1420->156|1445->161|1488->178|1506->188|1531->193|1577->213|1595->223|1623->231|1685->267|1728->294|1768->296|1804->305|1846->320|1861->326|1911->355|1942->359|1967->363|1996->364|2044->382|2074->385|2134->418|2149->424|2190->444|2249->473
-                  LINES: 28->1|33->1|35->3|35->3|35->3|35->3|35->3|36->4|37->5|37->5|37->5|38->6|38->6|38->6|39->7|39->7|39->7|43->11|43->11|43->11|44->12|44->12|44->12|44->12|44->12|44->12|44->12|45->13|46->14|49->17|49->17|49->17|51->19
+                  DATE: Sun Nov 05 15:58:42 EST 2017
+                  SOURCE: /vagrant/316_project/play-colleges/app/views/college.scala.html
+                  HASH: 1a33911bbb3885b4b46d5512b76ed0f2c63e1740
+                  MATRIX: 998->1|1207->114|1235->117|1289->163|1328->165|1348->167|1387->169|1416->172|1457->187|1475->197|1500->202|1543->219|1561->229|1586->234|1632->254|1650->264|1678->272|1790->358|1838->390|1878->392|1914->401|1956->416|1971->422|2021->451|2052->455|2077->459|2106->460|2154->478|2184->481|2280->551|2330->585|2370->587|2406->596|2448->611|2463->617|2513->646|2544->650|2569->654|2598->655|2646->673|2676->676|2735->708|2750->714|2791->734|2850->763
+                  LINES: 28->1|33->1|35->3|35->3|35->3|35->3|35->3|36->4|37->5|37->5|37->5|38->6|38->6|38->6|39->7|39->7|39->7|44->12|44->12|44->12|45->13|45->13|45->13|45->13|45->13|45->13|45->13|46->14|47->15|50->18|50->18|50->18|51->19|51->19|51->19|51->19|51->19|51->19|51->19|52->20|53->21|55->23|55->23|55->23|57->25
                   -- GENERATED --
               */
           

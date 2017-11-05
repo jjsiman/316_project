@@ -68,8 +68,8 @@ Seq[Any](format.raw/*1.48*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sun Nov 05 15:32:21 EST 2017
-                  SOURCE: /vagrant/project/316_project/play-colleges/app/views/main.scala.html
+                  DATE: Sun Nov 05 15:58:42 EST 2017
+                  SOURCE: /vagrant/316_project/play-colleges/app/views/main.scala.html
                   HASH: 80b68c3795d4a518b6e681dae8ea1ab129dcd840
                   MATRIX: 957->1|1098->47|1126->49|1634->530|1649->536|1704->570|1770->610|1797->616|1827->619|1890->655|1905->661|1955->690|2072->780|2100->787|2156->816|2184->823
                   LINES: 28->1|33->1|35->3|44->12|44->12|44->12|45->13|45->13|46->14|48->16|48->16|48->16|50->18|50->18|51->19|51->19

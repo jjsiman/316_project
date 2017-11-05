@@ -20,3 +20,8 @@ exit
 run
 exit
 run
+exit
+sbt
+run
+exit
+run
