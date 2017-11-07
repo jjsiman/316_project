@@ -37,15 +37,15 @@ Seq[Any](format.raw/*1.48*/("""
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>Play/Java DB-Colleges Example</title>
-    <meta name="description" content="A sample Play/Java website for db-colleges"/>
-    <meta name="keywords" content="play, java, db-colleges"/>
+    <title>College Database</title>
+    <meta name="description" content="A better way to make an informed college decision"/>
+    <meta name="keywords" content="play, java, colleges"/>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
     <link rel="stylesheet" href=""""),_display_(/*12.35*/routes/*12.41*/.Assets.at("stylesheets/main.css")),format.raw/*12.75*/("""" type="text/css" media="screen"/>
     """),_display_(/*13.6*/script),format.raw/*13.12*/("""
   """),format.raw/*14.3*/("""</head>
   <body>
-    <h1><img src=""""),_display_(/*16.20*/routes/*16.26*/.Assets.at("images/beer.jpg")),format.raw/*16.55*/("""" style="float:right"/>Play/Java DB-Colleges Example</h1>
+    <h1><img src=""""),_display_(/*16.20*/routes/*16.26*/.Assets.at("images/beer.jpg")),format.raw/*16.55*/("""" style="float:right"/>College Database</h1>
     <hr/>
     <h2 id="heading">"""),_display_(/*18.23*/heading),format.raw/*18.30*/("""</h2>
     <div id="content">"""),_display_(/*19.24*/content),format.raw/*19.31*/("""</div>
@@ -68,10 +68,10 @@ Seq[Any](format.raw/*1.48*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sun Nov 05 15:58:42 EST 2017
+                  DATE: Tue Nov 07 15:32:00 EST 2017
                   SOURCE: /vagrant/316_project/play-colleges/app/views/main.scala.html
-                  HASH: 80b68c3795d4a518b6e681dae8ea1ab129dcd840
-                  MATRIX: 957->1|1098->47|1126->49|1634->530|1649->536|1704->570|1770->610|1797->616|1827->619|1890->655|1905->661|1955->690|2072->780|2100->787|2156->816|2184->823
+                  HASH: ee786dd60475a80bdc6cee9be856fcd9bb69dc8d
+                  MATRIX: 957->1|1098->47|1126->49|1625->521|1640->527|1695->561|1761->601|1788->607|1818->610|1881->646|1896->652|1946->681|2050->758|2078->765|2134->794|2162->801
                   LINES: 28->1|33->1|35->3|44->12|44->12|44->12|45->13|45->13|46->14|48->16|48->16|48->16|50->18|50->18|51->19|51->19
                   -- GENERATED --
               */

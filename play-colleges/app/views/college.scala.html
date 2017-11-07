@@ -1,7 +1,8 @@
-@(schoolInfo: models.collegesDB.SchoolInfo, similarSizedSchools: List[String],similarTuitionSchools: List[String])
+@(schoolInfo: models.collegesDB.SchoolInfo, similarSizedSchools: List[String],similarTuitionSchools: List[String],closeSchools: List[String])
 
-@main("School Information: " + schoolInfo.name) { } {
+@main(schoolInfo.name) { } {
   <p>
+    Located in @schoolInfo.city, @schoolInfo.state<br/>
     Size: @schoolInfo.size<br/>
     Rank: @schoolInfo.rank<br/>
     Tuition: @schoolInfo.tuition<br/>
@@ -16,6 +17,12 @@
   <p>
       Check out these schools with similar tuition!
       @for(name <- similarTuitionSchools) {
+        <li> <a href="@routes.Application.viewSchool(name)"> @name </a> </li>
+      }
+  </p>
+  <p>
+      Check out these schools close by!
+      @for(name <- closeSchools) {
         <li> <a href="@routes.Application.viewSchool(name)"> @name </a> </li>
       }
   </p>

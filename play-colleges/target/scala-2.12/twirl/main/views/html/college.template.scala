@@ -22,47 +22,54 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object college extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template3[models.collegesDB.SchoolInfo,List[String],List[String],play.twirl.api.HtmlFormat.Appendable] {
+object college extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template4[models.collegesDB.SchoolInfo,List[String],List[String],List[String],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(schoolInfo: models.collegesDB.SchoolInfo, similarSizedSchools: List[String],similarTuitionSchools: List[String]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(schoolInfo: models.collegesDB.SchoolInfo, similarSizedSchools: List[String],similarTuitionSchools: List[String],closeSchools: List[String]):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.115*/("""
+Seq[Any](format.raw/*1.142*/("""
 
-"""),_display_(/*3.2*/main("School Information: " + schoolInfo.name)/*3.48*/ {_display_(Seq[Any](format.raw/*3.50*/(""" """)))}/*3.52*/ {_display_(Seq[Any](format.raw/*3.54*/("""
+"""),_display_(/*3.2*/main(schoolInfo.name)/*3.23*/ {_display_(Seq[Any](format.raw/*3.25*/(""" """)))}/*3.27*/ {_display_(Seq[Any](format.raw/*3.29*/("""
   """),format.raw/*4.3*/("""<p>
-    Size: """),_display_(/*5.12*/schoolInfo/*5.22*/.size),format.raw/*5.27*/("""<br/>
-    Rank: """),_display_(/*6.12*/schoolInfo/*6.22*/.rank),format.raw/*6.27*/("""<br/>
-    Tuition: """),_display_(/*7.15*/schoolInfo/*7.25*/.tuition),format.raw/*7.33*/("""<br/>
+    Located in """),_display_(/*5.17*/schoolInfo/*5.27*/.city),format.raw/*5.32*/(""", """),_display_(/*5.35*/schoolInfo/*5.45*/.state),format.raw/*5.51*/("""<br/>
+    Size: """),_display_(/*6.12*/schoolInfo/*6.22*/.size),format.raw/*6.27*/("""<br/>
+    Rank: """),_display_(/*7.12*/schoolInfo/*7.22*/.rank),format.raw/*7.27*/("""<br/>
+    Tuition: """),_display_(/*8.15*/schoolInfo/*8.25*/.tuition),format.raw/*8.33*/("""<br/>
     <br/>
   </p>
   <p>
       Check out these schools with similar sizes!
-      """),_display_(/*12.8*/for(name <- similarSizedSchools) yield /*12.40*/ {_display_(Seq[Any](format.raw/*12.42*/("""
-        """),format.raw/*13.9*/("""<li> <a href=""""),_display_(/*13.24*/routes/*13.30*/.Application.viewSchool(name)),format.raw/*13.59*/(""""> """),_display_(/*13.63*/name),format.raw/*13.67*/(""" """),format.raw/*13.68*/("""</a> </li>
-      """)))}),format.raw/*14.8*/("""
-  """),format.raw/*15.3*/("""</p>
+      """),_display_(/*13.8*/for(name <- similarSizedSchools) yield /*13.40*/ {_display_(Seq[Any](format.raw/*13.42*/("""
+        """),format.raw/*14.9*/("""<li> <a href=""""),_display_(/*14.24*/routes/*14.30*/.Application.viewSchool(name)),format.raw/*14.59*/(""""> """),_display_(/*14.63*/name),format.raw/*14.67*/(""" """),format.raw/*14.68*/("""</a> </li>
+      """)))}),format.raw/*15.8*/("""
+  """),format.raw/*16.3*/("""</p>
   <p>
       Check out these schools with similar tuition!
-      """),_display_(/*18.8*/for(name <- similarTuitionSchools) yield /*18.42*/ {_display_(Seq[Any](format.raw/*18.44*/("""
-        """),format.raw/*19.9*/("""<li> <a href=""""),_display_(/*19.24*/routes/*19.30*/.Application.viewSchool(name)),format.raw/*19.59*/(""""> """),_display_(/*19.63*/name),format.raw/*19.67*/(""" """),format.raw/*19.68*/("""</a> </li>
-      """)))}),format.raw/*20.8*/("""
-  """),format.raw/*21.3*/("""</p>
+      """),_display_(/*19.8*/for(name <- similarTuitionSchools) yield /*19.42*/ {_display_(Seq[Any](format.raw/*19.44*/("""
+        """),format.raw/*20.9*/("""<li> <a href=""""),_display_(/*20.24*/routes/*20.30*/.Application.viewSchool(name)),format.raw/*20.59*/(""""> """),_display_(/*20.63*/name),format.raw/*20.67*/(""" """),format.raw/*20.68*/("""</a> </li>
+      """)))}),format.raw/*21.8*/("""
+  """),format.raw/*22.3*/("""</p>
   <p>
-    Search <a href=""""),_display_(/*23.22*/routes/*23.28*/.Application.index()),format.raw/*23.48*/("""">other schools</a>.
+      Check out these schools close by!
+      """),_display_(/*25.8*/for(name <- closeSchools) yield /*25.33*/ {_display_(Seq[Any](format.raw/*25.35*/("""
+        """),format.raw/*26.9*/("""<li> <a href=""""),_display_(/*26.24*/routes/*26.30*/.Application.viewSchool(name)),format.raw/*26.59*/(""""> """),_display_(/*26.63*/name),format.raw/*26.67*/(""" """),format.raw/*26.68*/("""</a> </li>
+      """)))}),format.raw/*27.8*/("""
+  """),format.raw/*28.3*/("""</p>
+  <p>
+    Search <a href=""""),_display_(/*30.22*/routes/*30.28*/.Application.index()),format.raw/*30.48*/("""">other schools</a>.
   </p>
-""")))}),format.raw/*25.2*/("""
+""")))}),format.raw/*32.2*/("""
 """))
       }
     }
   }
 
-  def render(schoolInfo:models.collegesDB.SchoolInfo,similarSizedSchools:List[String],similarTuitionSchools:List[String]): play.twirl.api.HtmlFormat.Appendable = apply(schoolInfo,similarSizedSchools,similarTuitionSchools)
+  def render(schoolInfo:models.collegesDB.SchoolInfo,similarSizedSchools:List[String],similarTuitionSchools:List[String],closeSchools:List[String]): play.twirl.api.HtmlFormat.Appendable = apply(schoolInfo,similarSizedSchools,similarTuitionSchools,closeSchools)
 
-  def f:((models.collegesDB.SchoolInfo,List[String],List[String]) => play.twirl.api.HtmlFormat.Appendable) = (schoolInfo,similarSizedSchools,similarTuitionSchools) => apply(schoolInfo,similarSizedSchools,similarTuitionSchools)
+  def f:((models.collegesDB.SchoolInfo,List[String],List[String],List[String]) => play.twirl.api.HtmlFormat.Appendable) = (schoolInfo,similarSizedSchools,similarTuitionSchools,closeSchools) => apply(schoolInfo,similarSizedSchools,similarTuitionSchools,closeSchools)
 
   def ref: this.type = this
 
@@ -71,11 +78,11 @@ Seq[Any](format.raw/*1.115*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sun Nov 05 15:58:42 EST 2017
+                  DATE: Tue Nov 07 17:18:50 EST 2017
                   SOURCE: /vagrant/316_project/play-colleges/app/views/college.scala.html
-                  HASH: 1a33911bbb3885b4b46d5512b76ed0f2c63e1740
-                  MATRIX: 998->1|1207->114|1235->117|1289->163|1328->165|1348->167|1387->169|1416->172|1457->187|1475->197|1500->202|1543->219|1561->229|1586->234|1632->254|1650->264|1678->272|1790->358|1838->390|1878->392|1914->401|1956->416|1971->422|2021->451|2052->455|2077->459|2106->460|2154->478|2184->481|2280->551|2330->585|2370->587|2406->596|2448->611|2463->617|2513->646|2544->650|2569->654|2598->655|2646->673|2676->676|2735->708|2750->714|2791->734|2850->763
-                  LINES: 28->1|33->1|35->3|35->3|35->3|35->3|35->3|36->4|37->5|37->5|37->5|38->6|38->6|38->6|39->7|39->7|39->7|44->12|44->12|44->12|45->13|45->13|45->13|45->13|45->13|45->13|45->13|46->14|47->15|50->18|50->18|50->18|51->19|51->19|51->19|51->19|51->19|51->19|51->19|52->20|53->21|55->23|55->23|55->23|57->25
+                  HASH: 427d07b67d1aa43dca77c7be41eeaa1f7b214be6
+                  MATRIX: 1011->1|1247->141|1275->144|1304->165|1343->167|1363->169|1402->171|1431->174|1477->194|1495->204|1520->209|1549->212|1567->222|1593->228|1636->245|1654->255|1679->260|1722->277|1740->287|1765->292|1811->312|1829->322|1857->330|1969->416|2017->448|2057->450|2093->459|2135->474|2150->480|2200->509|2231->513|2256->517|2285->518|2333->536|2363->539|2459->609|2509->643|2549->645|2585->654|2627->669|2642->675|2692->704|2723->708|2748->712|2777->713|2825->731|2855->734|2939->792|2980->817|3020->819|3056->828|3098->843|3113->849|3163->878|3194->882|3219->886|3248->887|3296->905|3326->908|3385->940|3400->946|3441->966|3500->995
+                  LINES: 28->1|33->1|35->3|35->3|35->3|35->3|35->3|36->4|37->5|37->5|37->5|37->5|37->5|37->5|38->6|38->6|38->6|39->7|39->7|39->7|40->8|40->8|40->8|45->13|45->13|45->13|46->14|46->14|46->14|46->14|46->14|46->14|46->14|47->15|48->16|51->19|51->19|51->19|52->20|52->20|52->20|52->20|52->20|52->20|52->20|53->21|54->22|57->25|57->25|57->25|58->26|58->26|58->26|58->26|58->26|58->26|58->26|59->27|60->28|62->30|62->30|62->30|64->32
                   -- GENERATED --
               */
           

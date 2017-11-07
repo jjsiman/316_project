@@ -1,102 +1,1 @@
-Princeton University,Princeton,NJ,5400,47140,1
-Harvard University,Cambridge,MA,6710,48949,2
-University of Chicago,Chicago,IL,5941,54825,3
-Yale University,New Haven,CT,5472,51400,3
-Columbia University,New York,NY,6113,57208,5
-Massachusetts Institute of Technology,Cambridge,MA,49892,4524,5
-Stanford University,Stanford,CA,7034,49617,5
-University of Pennsylvania,Philadelphia,PA,10019,53534,8
-Duke University,Durham,NC,6609,53744,9
-California Institute of Technology,Pasadena,CA,979,49908,10
-Darthmouth College,Hanover,NH,4310,52950,11
-Johns Hopkins University,Baltimore,MD,6117,52170,11
-Northwestern University,Evanston,IL,8353,52678,11
-Brown University,Providence,RI,6926,53419,14
-Cornell University,Ithaca,NY,14566,52853,14
-Rice University,Houston,TX,3893,45608,14
-Vanderbilt University,Nashville,TN,6871,47664,14
-University of Notre Dame,South Bend,IN,8530,51505,18
-Washington University in St. Louis,St. Louis,MO,7540,51533,18
-Georgetown University,Washington,DC,7453,52300,20
-Emory University,Atlanta,GA,6861,49392,21
-University of California at Berkeley,Berkeley,CA,29311,42112,21
-University of California at Los Angeles,Los Angeles,CA,30873,41270,21
-University of Southern California,Los Angeles,CA,18794,54259,21
-Carnegie Mellon University,Pittsburgh,PA,6673,53910,25
-University of Virginia,Charlotesville,VA,16331,46975,25
-Wake Forest University,Winston-Salem,NC,4955,51400,27
-University of Michigan at Ann Arbor,Ann Arbor,MI,28983,47476,28
-Tufts University,Medford,MA,5508,54318,29
-New York University,New York,NY,26135,50464,30
-University of North Carolina at Chapel Hill,Chapel Hill,NC,18523,34588,30
-Boston College,Chestnut Hill,MA,9309,53346,32
-College of William and Mary,Williamsburg,VA,6276,43099,32
-Brandeis University,Waltham,MA,3608,53582,34
-Georgia Institute of Technology,Atlanta,GA,15489,33014,34
-University of Rochester,Rochester,NY,6386,52020,34
-Boston University,Boston,MA,17944,52082,37
-Case Western Reserve University,Cleveland,OH,5152,47500,37
-University of California at Santa Barbara,Santa Barbara,CA,21574,42423,37
-Northeastern University,Boston,MA,13473,49497,40
-Tulane University,New Orleans,LA,6377,52960,40
-Rensselaer Polytechnic Institute,Troy,NY,6265,52305,42
-University of California at Irvine,Irvine,CA,27331,43530,42
-University of California at San Diego,San Diego,CA,28127,44197,42
-University of Florida,Gainesville,FL,34554,28658,42
-Lehigh University,Bethlehem,PA,5080,50740,46
-Pepperdine University,Malibu,CA,3542,51992,46
-University of California at Davis,Davis,CA,29546,42396,46
-University of Miami,Coral Gables,FL,10849,48484,46
-University of Wisconsin at Madison,Madison,WI,31710,34782,46
-Villanova University,Villanova,PA,6999,51434,46
-Pennsylvania State University at University Park,University Park,PA,41359,33664,52
-University of Illinois at Urbana-Champaign,Champaign,IL,33932,31988,52
-Ohio State University at Columbus,Columbus,OH,45831,29659,54
-University of Georgia,Athens,GA,27951,30392,54
-George Washington University,Washington,DC,11504,53518,56
-Purdue University at West Lafayette,West Lafayette,IN,30043,28804,56
-University of Connecticut,Storrs,CT,19324,36948,56
-University of Texas at Austin,Austin,TX,40168,35766,56
-University of Washington,Seattle,WA,30933,35538,56
-Brigham Young University at Provo,Provo,UT,30979,5460,61
-Fordham University,New York,NY,9258,50601,61
-Southern Methodist University,Dallas,TX,6521,52498,61
-Syracuse University,Syracuse,NY,15218,46755,61
-University of Maryland at College Park,College Park,MD,28472,33606,61
-Worcester Polytechnic Institute,Worcester,MA,4432,48628,61
-Clemson University,Clemson,SC,18599,35654,67
-University of Pittsburgh,Pittsburgh,PA,19123,30642,68
-American University,Washington,DC,7901,46615,69
-Rutgers University at New Brunswick,Piscataway,NJ,36168,30023,69
-Stevens Institute of Technology,Hoboken,NJ,3021,50554,69
-Texas A&M University at College Station,College Station,TX,50735,30208,69
-University of Minnesota at Twin Cities,Minneapolis,MN,34871,26603,69
-Virginia Tech,Blacksburg,VA,25791,29371,69
-Baylor University,Waco,TX,14348,43790,75
-Colorado School of Mines,Golden,CO,4612,37436,75
-University of Massachusetts at Amherst,Amherst,MA,23373,33662,75
-Miami University at Oxford,Oxford,OH,16981,32768,78
-Texas Christian University,Fort Worth,TX,8891,44760,78
-University of Iowa,Iowa City,IA,24476,28813,78
-Clark University,Worcester,MA,2289,44400,81
-Florida State University,Tallahassee,FL,32929,21673,81
-Michigan State University,East Lansing,MI,39090,39405,81
-North Carolina State University at Raleigh,Raleigh,NC,23847,27406,81
-University of California at Santa Cruz,Santa Cruz,CA,16962,42042,81
-University of Delaware,Newark,DE,18374,32250,81
-Binghamton University SUNY,Binghamton,NY,13632,24403,87
-University of Denver,Denver,CO,5754,48669,87
-University of Tulsa,Tulsa,OK,3406,39502,87
-Indiana University at Bloomington,Bloomington,IN,39184,34845,90
-Marquette University,Milwaukee,WI,8238,39900,90
-University of Colorado at Boulder,Boulder,CO,27846,35079,90
-University of San Diego,San Diego,CA,5711,47708,90
-Drexel University,Philadelphia,PA,13251,52002,94
-Saint Louis University,St. Louis,MO,7454,42166,94
-Yeshiva University,New York,NY,2714,42000,94
-Rochester Institute of Technology,Rochester,NY,12410,40068,97
-Stony Brook University SUNY,Stony Brook,NY,17026,26297,97
-SUNY College of Environmental Science and Forestry,Syracuse,NY,1755,18090,97
-University at Buffalo SUNY,Buffalo,NY,20411,26270,97
-University of Oklahoma,Norman,OK,22436,24443,97
-University of Vermont,Burlington,VT,11159,41356,97
+﻿Princeton University,5400,47140,1Harvard University,6710,48949,2University of Chicago,5941,54825,3Yale University,5472,51400,3Columbia University,6113,57208,5Massachusetts Institute of Technology,49892,4524,5Stanford University,7034,49617,5University of Pennsylvania,10019,53534,8Duke University,6609,53744,9California Institute of Technology,979,49908,10Darthmouth College,4310,52950,11Johns Hopkins University,6117,52170,11Northwestern University,8353,52678,11Brown University,6926,53419,14Cornell University,14566,52853,14Rice University,3893,45608,14Vanderbilt University,6871,47664,14University of Notre Dame,8530,51505,18Washington University in St. Louis,7540,51533,18Georgetown University,7453,52300,20Emory University,6861,49392,21University of California at Berkeley,29311,42112,21University of California at Los Angeles,30873,41270,21University of Southern California,18794,54259,21Carnegie Mellon University,6673,53910,25University of Virginia,16331,46975,25Wake Forest University,4955,51400,27University of Michigan at Ann Arbor,28983,47476,28Tufts University,5508,54318,29New York University,26135,50464,30University of North Carolina at Chapel Hill,18523,34588,30Boston College,9309,53346,32College of William and Mary,6276,43099,32Brandeis University,3608,53582,34Georgia Institute of Technology,15489,33014,34University of Rochester,6386,52020,34Boston University,17944,52082,37Case Western Reserve University,5152,47500,37University of California at Santa Barbara,21574,42423,37Northeastern University,13473,49497,40Tulane University,6377,52960,40Rensselaer Polytechnic Institute,6265,52305,42University of California at Irvine,27331,43530,42University of California at San Diego,28127,44197,42University of Florida,34554,28658,42Lehigh University,5080,50740,46Pepperdine University,3542,51992,46University of California at Davis,29546,42396,46University of Miami,10849,48484,46University of Wisconsin at Madison,31710,34782,46Villanova University,6999,51434,46Pennsylvania State University at University Park,41359,33664,52University of Illinois at Urbana-Champaign,33932,31988,52Ohio State University at Columbus,45831,29659,54University of Georgia,27951,30392,54George Washington University,11504,53518,56Purdue University at West Lafayette,30043,28804,56University of Connecticut,19324,36948,56University of Texas at Austin,40168,35766,56University of Washington,30933,35538,56Brigham Young University at Provo,30979,5460,61Fordham University,9258,50601,61Southern Methodist University,6521,52498,61Syracuse University,15218,46755,61University of Maryland at College Park,28472,33606,61Worcester Polytechnic Institute,4432,48628,61Clemson University,18599,35654,67University of Pittsburgh,19123,30642,68American University,7901,46615,69Rutgers University at New Brunswick,36168,30023,69Stevens Institute of Technology,3021,50554,69Texas A&M University at College Station,50735,30208,69University of Minnesota at Twin Cities,34871,26603,69Virginia Tech,25791,29371,69Baylor University,14348,43790,75Colorado School of Mines,4612,37436,75University of Massachusetts at Amherst,23373,33662,75Miami University at Oxford,16981,32768,78Texas Christian University,8891,44760,78University of Iowa,24476,28813,78Clark University,2289,44400,81Florida State University,32929,21673,81Michigan State University,39090,39405,81North Carolina State University at Raleigh,23847,27406,81University of California at Santa Cruz,16962,42042,81University of Delaware,18374,32250,81Binghamton University SUNY,13632,24403,87University of Denver,5754,48669,87University of Tulsa,3406,39502,87Indiana University at Bloomington,39184,34845,90Marquette University,8238,39900,90University of Colorado at Boulder,27846,35079,90University of San Diego,5711,47708,90Drexel University,13251,52002,94Saint Louis University,7454,42166,94Yeshiva University,2714,42000,94Rochester Institute of Technology,12410,40068,97Stony Brook University SUNY,17026,26297,97SUNY College of Environmental Science and Forestry,1755,18090,97University at Buffalo SUNY,20411,26270,97University of Oklahoma,22436,24443,97University of Vermont,11159,41356,97

@@ -1,28 +1,23 @@
 CREATE TABLE School
 (name VARCHAR(256) NOT NULL PRIMARY KEY,
- city VARCHAR(256) NOT NULL,
- state VARCHAR(2) NOT NULL,
  size INTEGER NOT NULL,
- rank INTEGER NOT NULL,
- tuition INTEGER NOT NULL
-);
-
-CREATE TABLE University
-(name VARCHAR(256) NOT NULL REFERENCES School(name)
-);
-
-CREATE TABLE College
-(name VARCHAR(256) NOT NULL REFERENCES School(name),
- highest_degree VARCHAR(256) NOT NULL
+ tuition INTEGER NOT NULL,
+ rank INTEGER NOT NULL
 );
 
 CREATE TABLE City
 (name VARCHAR(256) NOT NULL,
  state VARCHAR(256) NOT NULL,
-population INTEGER NOT NULL,
-cost INTEGER NOT NULL,
-crime INTEGER NOT NULL,
-PRIMARY KEY (name, state)
+ latitude FLOAT NOT NULL,
+ longitude FLOAT NOT NULL,
+ population INTEGER,
+ medianResidentAge FLOAT,
+ HSDegree FLOAT,
+ medianIncome INTEGER,
+ belowPovertyLine FLOAT,
+ foreignBorn FLOAT,
+ crimeIndex FLOAT,
+ PRIMARY KEY (name, state)
 );
 
 CREATE TABLE Location

@@ -11,17 +11,50 @@ public class collegesDB {
 
     public static class SchoolInfo {
         public String name;
-
+        public String city;
+        public String state;
         public int size;
         public int rank;
         public int tuition;
+
         public SchoolInfo() {
         }
-        public SchoolInfo(String name,int size,int rank,int tuition) {
+        public SchoolInfo(String name,String city,String state,int size,int rank,int tuition) {
             this.name = name;
+            this.city = city;
+            this.state = state;
             this.size = size;
             this.rank = rank;
             this.tuition = tuition;
+        }
+    }
+    public static class CityInfo {
+        public String name;
+        public String state;
+        public float latitude;
+        public float longitude;
+        public int population;
+        public float medianResidentAge;
+        public float HSDegree;
+        public float medianIncome;
+        public float belowPovertyLine;
+        public float foreignBorn;
+        public float crimeIndex;
+
+        public CityInfo() {
+        }
+        public CityInfo(String name,String state,float latitude,float longitude,int population,float medianResidentAge,float HSDegree,float medianIncome,float belowPovertyLine,float foreignBorn,float crimeIndex) {
+          this.name=name;
+          this.state=state;
+          this.latitude=latitude;
+          this.longitude=longitude;
+          this.population=population;
+          this.medianResidentAge=medianResidentAge;
+          this.HSDegree=HSDegree;
+          this.medianIncome=medianIncome;
+          this.belowPovertyLine=belowPovertyLine;
+          this.foreignBorn=foreignBorn;
+          this.crimeIndex=crimeIndex;
         }
     }
 
@@ -99,7 +132,29 @@ public class collegesDB {
         int tuition = rs.getInt(1);
         rs.close();
         statement.close();
-        schoolInfo = new SchoolInfo(name, size, rank, tuition);
+        // retrieve city:
+        statement = connection
+        .prepareStatement("SELECT city_name FROM location JOIN school s ON s.name=school_name WHERE s.name = ?");
+        statement.setString(1, name);
+        rs = statement.executeQuery();
+        if (! rs.next()) {
+          return null;
+        }
+        String city = rs.getString(1);
+        rs.close();
+        statement.close();
+        // retrieve state:
+        statement = connection
+        .prepareStatement("SELECT state FROM location JOIN school s ON s.name=school_name WHERE s.name = ?");
+        statement.setString(1, name);
+        rs = statement.executeQuery();
+        if (! rs.next()) {
+          return null;
+        }
+        String state = rs.getString(1);
+        rs.close();
+        statement.close();
+        schoolInfo = new SchoolInfo(name,city,state,size,rank,tuition);
       } finally {
         if (connection != null) {
           try {
@@ -148,6 +203,34 @@ public class collegesDB {
           // retrieve similar in size:
           PreparedStatement statement = connection
           .prepareStatement("SELECT s2.name FROM school s1 JOIN school s2 ON s1.name <> s2.name WHERE s1.name = ? AND ABS(s1.tuition - s2.tuition) < 5000;");
+          statement.setString(1, name);
+          ResultSet rs = statement.executeQuery();
+          while (rs.next()) {
+            String school = rs.getString(1);
+            similarSchools.add(school);
+            }
+          rs.close();
+          statement.close();
+
+        } finally {
+          if (connection != null) {
+            try {
+              connection.close();
+            } catch (Exception e) {
+            }
+          }
+        }
+        return similarSchools;
+    }
+    public ArrayList<String> getCloseSchoolInfo(String name) throws SQLException {
+        Connection connection = null;
+        SchoolInfo schoolInfo = null;
+        ArrayList<String> similarSchools = new ArrayList<String>();
+        try {
+          connection = db.getConnection();
+          // retrieve similar in size:
+          PreparedStatement statement = connection
+          .prepareStatement("SELECT s.name, SQRT(POWER(c.latitude-gc.latitude,2)+POWER(c.longitude-gc.longitude,2)) as dist FROM School g JOIN Location gl ON g.name=gl.school_name JOIN City gc ON gc.name=gl.city_name AND gc.state=gl.state, School s JOIN Location l ON s.name=l.school_name JOIN City c ON c.name=l.city_name AND c.state=l.state WHERE g.name=? AND g.name!=s.name ORDER BY dist LIMIT 10;");
           statement.setString(1, name);
           ResultSet rs = statement.executeQuery();
           while (rs.next()) {

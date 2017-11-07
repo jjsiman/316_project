@@ -27,10 +27,11 @@ public class Application extends Controller {
       collegesDB.SchoolInfo schoolInfo = collegesDB.getSchoolInfo(name);
       ArrayList<String> similarSizeSchools = collegesDB.getSimilarSizeSchoolInfo(name);
       ArrayList<String> similarTuitionSchools = collegesDB.getSimilarTuitionSchoolInfo(name);
+      ArrayList<String> closeSchools = collegesDB.getCloseSchoolInfo(name);
       if (schoolInfo == null) {
         return ok(error.render("No school named \"" + name + "\""));
       } else {
-        return ok(college.render(schoolInfo, similarSizeSchools, similarTuitionSchools));
+        return ok(college.render(schoolInfo,similarSizeSchools,similarTuitionSchools,closeSchools));
       }
     }
 
