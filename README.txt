@@ -8,4 +8,5 @@ First, construct the colleges database. To do this, navigate to the database fol
 
 To run the website, navigate into the play-colleges directory and enter command 'sbt'.
 Once [play-colleges] appears in the command line, type 'run'.
-In a web browser on your local computer, enter 'localhost:9000' as the URL. We recommend using Google Chrome for the autocomplete feature.
+In a web browser on your local computer, enter 'localhost:9000' as the URL. 
+We recommend using Google Chrome for the autocomplete feature.
