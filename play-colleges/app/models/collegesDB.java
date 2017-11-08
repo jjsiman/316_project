@@ -174,7 +174,7 @@ public class collegesDB {
           connection = db.getConnection();
           // retrieve similar in size:
           PreparedStatement statement = connection
-          .prepareStatement("SELECT s2.name FROM school s1 JOIN school s2 ON s1.name <> s2.name WHERE s1.name = ? AND ABS(s1.size - s2.size) < 2000");
+          .prepareStatement("SELECT s2.name, ABS(s1.size-s2.size) AS sizeDif FROM school s1 JOIN school s2 ON s1.name <> s2.name WHERE s1.name = ? AND ABS(s1.size-s2.size) < 2000 ORDER BY sizeDif LIMIT 10;");
           statement.setString(1, name);
           ResultSet rs = statement.executeQuery();
           while (rs.next()) {
@@ -202,7 +202,7 @@ public class collegesDB {
           connection = db.getConnection();
           // retrieve similar in size:
           PreparedStatement statement = connection
-          .prepareStatement("SELECT s2.name FROM school s1 JOIN school s2 ON s1.name <> s2.name WHERE s1.name = ? AND ABS(s1.tuition - s2.tuition) < 5000;");
+          .prepareStatement("SELECT s2.name, ABS(s1.tuition-s2.tuition) AS tuitionDif FROM school s1 JOIN school s2 ON s1.name <> s2.name WHERE s1.name = ? AND ABS(s1.tuition-s2.tuition) < 5000 ORDER BY tuitionDif LIMIT 10;");
           statement.setString(1, name);
           ResultSet rs = statement.executeQuery();
           while (rs.next()) {
