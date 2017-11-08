@@ -93,6 +93,53 @@ public class collegesDB {
     public ArrayList<String> getAllSchoolNames() throws SQLException {
       return getAllNames("School");
     }
+    public CityInfo getCityInfo(String school_name) throws SQLException {
+      Connection connection = null;
+      CityInfo cityInfo = null;
+      try {
+        connection = db.getConnection();
+        // retrieve cityInfo
+        PreparedStatement statement = connection
+        .prepareStatement("SELECT city_name, state FROM Location WHERE school_name = ?");
+        statement.setString(1, school_name);
+        ResultSet rs = statement.executeQuery();
+        if (! rs.next()) {
+          return null;
+        }
+        String cName = rs.getString(1);
+        String sName = rs.getString(2);
+        rs.close();
+        statement.close();
+        statement = connection
+        .prepareStatement("SELECT * FROM City WHERE name=? AND state=?");
+        statement.setString(1,cName);
+        statement.setString(2,sName);
+        rs = statement.executeQuery();
+        if (! rs.next()) {
+          return null;
+        }
+        float lat = rs.getFloat(3);
+        float longit = rs.getFloat(4);
+        int pop = rs.getInt(5);
+        float medianResidentAge = rs.getFloat(6);
+        float HSDegree = rs.getFloat(7);
+        float medianIncome = rs.getFloat(8);
+        float belowPovertyLine = rs.getFloat(9);
+        float foreignBorn = rs.getFloat(10);
+        float crimeIndex = rs.getFloat(11);
+        rs.close();
+        statement.close();
+        cityInfo = new CityInfo(cName,sName,lat,longit,pop,medianResidentAge,HSDegree,medianIncome,belowPovertyLine,foreignBorn,crimeIndex);
+      } finally {
+        if (connection != null) {
+          try {
+            connection.close();
+          } catch (Exception e) {
+          }
+        }
+      }
+      return cityInfo;
+    }
 
     public SchoolInfo getSchoolInfo(String name) throws SQLException {
       Connection connection = null;
