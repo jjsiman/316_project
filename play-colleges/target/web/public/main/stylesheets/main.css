@@ -3,3 +3,36 @@ body {
     background: white;
     font-family: Verdana, Arial, Helvetica, sans-serif;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#nav {
+    float: left;
+    border-right:1px solid #000;
+}
+
+#nav:last-child {
+    border-right: none;
+}
+
+#nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#nav a:hover:not(.active) {
+    background-color: #2a4570;
+}
+
+.active {
+    background-color: #2a4570;
+}

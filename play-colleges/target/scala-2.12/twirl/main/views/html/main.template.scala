@@ -45,10 +45,16 @@ Seq[Any](format.raw/*1.48*/("""
     """),_display_(/*13.6*/script),format.raw/*13.12*/("""
   """),format.raw/*14.3*/("""</head>
   <body>
-    <h1><img src=""""),_display_(/*16.20*/routes/*16.26*/.Assets.at("images/beer.jpg")),format.raw/*16.55*/("""" style="float:right"/>College Database</h1>
-    <hr/>
-    <h2 id="heading">"""),_display_(/*18.23*/heading),format.raw/*18.30*/("""</h2>
-    <div id="content">"""),_display_(/*19.24*/content),format.raw/*19.31*/("""</div>
+
+    <ul>
+      <li id="nav"><a class="active" href=""""),_display_(/*18.45*/routes/*18.51*/.Application.index()),format.raw/*18.71*/("""">Home</a></li>
+      <li id="nav"><a href="#search">Search</a></li>
+      <li id="nav"><a href="#about">About</a></li>
+    </ul>
+
+    <h1>College Database</h1>
+    <h2 id="heading">"""),_display_(/*24.23*/heading),format.raw/*24.30*/("""</h2>
+    <div id="content">"""),_display_(/*25.24*/content),format.raw/*25.31*/("""</div>
     <hr/>
   </body>
 </html>
@@ -68,11 +74,11 @@ Seq[Any](format.raw/*1.48*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Nov 07 15:32:00 EST 2017
-                  SOURCE: /vagrant/316_project/play-colleges/app/views/main.scala.html
-                  HASH: ee786dd60475a80bdc6cee9be856fcd9bb69dc8d
-                  MATRIX: 957->1|1098->47|1126->49|1625->521|1640->527|1695->561|1761->601|1788->607|1818->610|1881->646|1896->652|1946->681|2050->758|2078->765|2134->794|2162->801
-                  LINES: 28->1|33->1|35->3|44->12|44->12|44->12|45->13|45->13|46->14|48->16|48->16|48->16|50->18|50->18|51->19|51->19
+                  DATE: Thu Nov 09 17:20:51 EST 2017
+                  SOURCE: /vagrant/project/316_project/play-colleges/app/views/main.scala.html
+                  HASH: d07460f78be958637201f7693f1e32b6e632680f
+                  MATRIX: 957->1|1098->47|1126->49|1625->521|1640->527|1695->561|1761->601|1788->607|1818->610|1916->681|1931->687|1972->707|2182->890|2210->897|2266->926|2294->933
+                  LINES: 28->1|33->1|35->3|44->12|44->12|44->12|45->13|45->13|46->14|50->18|50->18|50->18|56->24|56->24|57->25|57->25
                   -- GENERATED --
               */
           
