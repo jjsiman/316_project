@@ -36,3 +36,28 @@ ul {
 .active {
     background-color: #2a4570;
 }
+
+#searchbox {
+  width: 50%;
+  margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+#searchbox p {
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+#searchbox input[type=text] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+#searchbox input[type=submit] {
+  width: 50%;
+  max-width: 100px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}

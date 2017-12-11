@@ -1,8 +1,8 @@
 @(school: List[String])
 
-@main("All Schools") { } {
-  <p>Search for a school:
-  <form method="post" action="@routes.Application.viewSchoolSearch()">
+@main("") { } {
+  <form id="searchbox" method="post" action="@routes.Application.viewSchoolSearch()">
+    <p>Search for a school:</p>
     @helper.CSRF.formField
     <input list="schools" type="text" name="name" placeholder="School name"><br/>
       <datalist id="schools">
