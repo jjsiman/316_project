@@ -4,7 +4,7 @@ import play.db.*;
 import javax.inject.*;
 import java.sql.*;
 import javax.sql.*;
-import java.util.ArrayList;
+import java.util.*;
 
 @Singleton
 public class collegesDB {
@@ -16,16 +16,18 @@ public class collegesDB {
         public int size;
         public int rank;
         public int tuition;
+        public HashMap<String,ArrayList<Integer>> degrees;
 
         public SchoolInfo() {
         }
-        public SchoolInfo(String name,String city,String state,int size,int rank,int tuition) {
+        public SchoolInfo(String name,String city,String state,int size,int rank,int tuition,HashMap<String,ArrayList<Integer>> degrees) {
             this.name = name;
             this.city = city;
             this.state = state;
             this.size = size;
             this.rank = rank;
             this.tuition = tuition;
+            this.degrees = degrees;
         }
     }
     public static class CityInfo {
@@ -201,7 +203,37 @@ public class collegesDB {
         String state = rs.getString(1);
         rs.close();
         statement.close();
-        schoolInfo = new SchoolInfo(name,city,state,size,rank,tuition);
+        // retrive degrees and salaries
+        ArrayList<String> school_degrees = new ArrayList<String>();
+        ArrayList<Integer> sals;
+        statement = connection
+        .prepareStatement("SELECT degree_name FROM Offering WHERE school_name = ?");
+        statement.setString(1,name);
+        rs = statement.executeQuery();
+        while(rs.next()) {
+          String degree = rs.getString(1);
+          school_degrees.add(degree);
+        }
+        rs.close();
+        statement.close();
+        HashMap<String,ArrayList<Integer>> degrees = new HashMap<String,ArrayList<Integer>>();
+        for (String program : school_degrees) {
+          statement = connection
+          .prepareStatement("SELECT start_salary,tenyear_salary FROM Degree WHERE name = ?");
+          statement.setString(1,program);
+          rs = statement.executeQuery();
+          if (! rs.next()) {
+            return null;
+          }
+          sals = new ArrayList<Integer>();
+          int start_sal = rs.getInt(1);
+          int tenyr_sal = rs.getInt(2);
+          sals.add(start_sal);
+          sals.add(tenyr_sal);
+          degrees.put(program,sals);
+        }
+
+        schoolInfo = new SchoolInfo(name,city,state,size,rank,tuition,degrees);
       } finally {
         if (connection != null) {
           try {

@@ -1,4 +1,5 @@
-@(schoolInfo: models.collegesDB.SchoolInfo, cityInfo: models.collegesDB.CityInfo, similarSizedSchools: List[String],similarTuitionSchools: List[String],closeSchools: List[String])
+@(schoolInfo: models.collegesDB.SchoolInfo,cityInfo: models.collegesDB.CityInfo, similarSizedSchools: List[String],similarTuitionSchools: List[String],closeSchools: List[String])
+
 
 @main(schoolInfo.name) { } {
   <p>
@@ -7,9 +8,17 @@
     Rank: @schoolInfo.rank<br/>
     Tuition: @schoolInfo.tuition<br/>
     <br/>
+    Top Degrees at @schoolInfo.name
+    @for((name,salaries) <- schoolInfo.degrees) {
+      <li>@name</li>
+      Average starting salary: @salaries(0)<br/>
+      Average 10 year salary: @salaries(1)<br/>
+
+    }
+    <br/>
   </p>
   <p>
-    Some facts about @schoolInfo.city, @schoolInfo.state, where available:<br/>
+    Some facts about @schoolInfo.city, @schoolInfo.state<br/>
     Population: @cityInfo.population<br/>
     Median resident age: @cityInfo.medianResidentAge<br/>
     Percentage of residents with a high school degree: @cityInfo.HSDegree%<br/>
