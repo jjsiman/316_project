@@ -10,13 +10,13 @@ CREATE TABLE City
  state VARCHAR(256) NOT NULL,
  latitude FLOAT NOT NULL,
  longitude FLOAT NOT NULL,
- population INTEGER,
- medianResidentAge FLOAT,
- HSDegree FLOAT,
- medianIncome INTEGER,
- belowPovertyLine FLOAT,
- foreignBorn FLOAT,
- crimeIndex FLOAT,
+ population INTEGER NOT NULL,
+ medianResidentAge FLOAT NOT NULL,
+ HSDegree FLOAT NOT NULL,
+ medianIncome INTEGER NOT NULL,
+ belowPovertyLine FLOAT NOT NULL,
+ foreignBorn FLOAT NOT NULL,
+ crimeIndex FLOAT NOT NULL,
  PRIMARY KEY (name, state)
 );
 
@@ -26,13 +26,13 @@ CREATE TABLE Location
  state VARCHAR(256) NOT NULL
 );
 
-CREATE TABLE Program
+CREATE TABLE Degree
 (name VARCHAR(256) NOT NULL PRIMARY KEY,
- category VARCHAR(256) NOT NULL UNIQUE,
- expected_salary INTEGER NOT NULL
+ start_salary INTEGER NOT NULL,
+ tenyear_salary INTEGER NOT NULL
 );
 
 CREATE TABLE Offering
 (school_name VARCHAR(256) NOT NULL REFERENCES School(name),
- program_name VARCHAR(256) NOT NULL REFERENCES Program(name)
+ degree_name VARCHAR(256) NOT NULL REFERENCES Degree(name)
 );
