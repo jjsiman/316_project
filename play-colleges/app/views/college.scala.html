@@ -1,8 +1,6 @@
 @(schoolInfo: models.collegesDB.SchoolInfo,cityInfo: models.collegesDB.CityInfo, similarSizedSchools: List[String],similarTuitionSchools: List[String],closeSchools: List[String])
 
-@main("") { <link rel="stylesheet" href="@routes.Assets.at("stylesheets/colleges.css")" type="text/css" media="screen"/> } {
-
-@main(schoolInfo.name) { } {
+@main(schoolInfo.name) { <link rel="stylesheet" href="@routes.Assets.at("stylesheets/colleges.css")" type="text/css" media="screen"/> } {
   <ul>
     <li id="nav"><a href="@routes.Application.index()">Home</a></li>
     <li id="nav"><a href="@routes.Application.about()">About</a></li>
@@ -98,5 +96,4 @@
   <p>
     Search <a href="@routes.Application.index()">other schools</a>.
   </p>
-}
 }
