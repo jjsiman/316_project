@@ -54,9 +54,37 @@ ul {
   padding: 2em 14em 0 14em;
 }
 
+#city_name {
+	font-size: 32px;
+	font-style: italic;
+	font-family: sans-serif;
+	color: #34495E;
+	padding-bottom: 0;
+}
+
 #city_table {
+  background: #34495E;
+  color: #fff;
+  border-radius: .4em;
+  overflow: hidden;
+  padding-top: 0.3em;
+  padding-bottom: 3em;
+  padding-right: 4em;
+  padding-left: 4em;
+
 
 }
+
+#city_table th {
+  color: white;
+  padding: 1em 1em 0 1em;
+}
+
+#city_table td {
+  color: #dd5;
+  padding: 1em 1em 0 1em;
+}
+
 
 #go {
 	background-color: black;
