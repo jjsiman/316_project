@@ -50,7 +50,7 @@ Seq[Any](format.raw/*1.19*/("""
     <p>So how do you balance your remarkable content creation with your web design needs? It all starts with the "About Us" page.</p>
     <p>For a remarkable about page, all you need to do is figure out your company's unique identity, and then share it with the world. Easy, right? Of course it's not easy. That said, the "About Us" page is one of the most important pages on your website, and it can't go neglected. It also happens to be one of the most commonly overlooked pages, which is why you should make it stand out.</p>
     <p>But it can be accomplished. In fact, there are some companies out there with remarkable "About Us" pages, and there are elements of them that you can emulate on your own website. By the end of this post, showing off how your company's greatness won't seem like such a challenging feat.</p>
-    <p>Go back to <a href=""""),_display_(/*21.29*/routes/*21.35*/.Application.index()),format.raw/*21.55*/("""">search</a>.</p>
+    <p align="center">Go back to <a href=""""),_display_(/*21.44*/routes/*21.50*/.Application.index()),format.raw/*21.70*/("""">search</a>.</p>
   </section>
 """)))}),format.raw/*23.2*/("""
 """))
@@ -69,10 +69,10 @@ Seq[Any](format.raw/*1.19*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 11 23:06:18 EST 2017
+                  DATE: Mon Dec 11 23:26:00 EST 2017
                   SOURCE: /vagrant/project/316_project/play-colleges/app/views/about.scala.html
-                  HASH: 7efa041f8bcacc0bcb5e31a62cfba08cad301abb
-                  MATRIX: 948->1|1060->18|1088->21|1104->29|1143->31|1163->33|1202->35|1231->38|1289->70|1303->76|1343->96|1427->154|1441->160|1481->180|2903->1575|2918->1581|2959->1601|3021->1633
+                  HASH: cb0f9d7e1414f226bffd8fac9714d304cc43e6b3
+                  MATRIX: 948->1|1060->18|1088->21|1104->29|1143->31|1163->33|1202->35|1231->38|1289->70|1303->76|1343->96|1427->154|1441->160|1481->180|2918->1590|2933->1596|2974->1616|3036->1648
                   LINES: 28->1|33->1|35->3|35->3|35->3|35->3|35->3|36->4|37->5|37->5|37->5|38->6|38->6|38->6|53->21|53->21|53->21|55->23
                   -- GENERATED --
               */

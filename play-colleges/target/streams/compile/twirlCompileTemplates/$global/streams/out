@@ -1,0 +1,4 @@
+[0m[[31merror[0m] [0m/vagrant/project/316_project/play-colleges/app/views/college.scala.html:101: Expected '}' but found 'EOF'[0m
+[0m[[31merror[0m] [0m}[0m
+[0m[[31merror[0m] [0m ^[0m
+[0m[[31merror[0m] [0m(compile:[31mtwirlCompileTemplates[0m) Twirl compilation failed[0m

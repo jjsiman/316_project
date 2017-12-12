@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/vagrant/project/316_project/play-colleges/conf/routes
-// @DATE:Mon Dec 11 21:39:13 EST 2017
+// @DATE:Mon Dec 11 23:25:59 EST 2017
 
 import play.api.mvc.Call
 
@@ -37,7 +37,7 @@ package controllers {
     // @LINE:6
     def about(): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "About")
+      Call("GET", _prefix + { _defaultPrefix } + "about")
     }
   
     // @LINE:5
@@ -55,7 +55,7 @@ package controllers {
     // @LINE:7
     def viewSchool(name:String): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "School/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("name", name)))
+      Call("GET", _prefix + { _defaultPrefix } + "school/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("name", name)))
     }
   
   }

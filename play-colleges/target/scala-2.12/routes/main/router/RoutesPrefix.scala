@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/vagrant/project/316_project/play-colleges/conf/routes
-// @DATE:Mon Dec 11 21:39:13 EST 2017
+// @DATE:Mon Dec 11 23:25:59 EST 2017
 
 
 package router {

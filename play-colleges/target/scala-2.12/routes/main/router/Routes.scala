@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/vagrant/project/316_project/play-colleges/conf/routes
-// @DATE:Mon Dec 11 21:39:13 EST 2017
+// @DATE:Mon Dec 11 23:25:59 EST 2017
 
 package router
 
@@ -41,8 +41,8 @@ class Routes(
 
   def documentation = List(
     ("""GET""", this.prefix, """controllers.Application.index()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """About""", """controllers.Application.about()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """School/""" + "$" + """name<[^/]+>""", """controllers.Application.viewSchool(name:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """about""", """controllers.Application.about()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """school/""" + "$" + """name<[^/]+>""", """controllers.Application.viewSchool(name:String)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """search-school""", """controllers.Application.viewSchoolSearch()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.at(path:String = "/public", file:String)"""),
     Nil
@@ -72,7 +72,7 @@ class Routes(
 
   // @LINE:6
   private[this] lazy val controllers_Application_about1_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("About")))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("about")))
   )
   private[this] lazy val controllers_Application_about1_invoker = createInvoker(
     Application_1.about(),
@@ -82,7 +82,7 @@ class Routes(
       "about",
       Nil,
       "GET",
-      this.prefix + """About""",
+      this.prefix + """about""",
       """""",
       Seq()
     )
@@ -90,7 +90,7 @@ class Routes(
 
   // @LINE:7
   private[this] lazy val controllers_Application_viewSchool2_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("School/"), DynamicPart("name", """[^/]+""",true)))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("school/"), DynamicPart("name", """[^/]+""",true)))
   )
   private[this] lazy val controllers_Application_viewSchool2_invoker = createInvoker(
     Application_1.viewSchool(fakeValue[String]),
@@ -100,7 +100,7 @@ class Routes(
       "viewSchool",
       Seq(classOf[String]),
       "GET",
-      this.prefix + """School/""" + "$" + """name<[^/]+>""",
+      this.prefix + """school/""" + "$" + """name<[^/]+>""",
       """""",
       Seq()
     )

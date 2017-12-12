@@ -3,8 +3,8 @@
 # ~~~~
 
 GET      /                           controllers.Application.index()
-GET      /About                      controllers.Application.about()
-GET	     /School/:name               controllers.Application.viewSchool(name:String)
+GET      /about                      controllers.Application.about()
+GET	     /school/:name               controllers.Application.viewSchool(name:String)
 #GET     /edit-drinker/:name         controllers.Application.editDrinker(name:String)
 #POST    /update-drinker             controllers.Application.updateDrinker()
 POST     /search-school              controllers.Application.viewSchoolSearch()

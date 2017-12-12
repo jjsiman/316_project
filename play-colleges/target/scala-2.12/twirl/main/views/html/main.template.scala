@@ -25,12 +25,12 @@ import play.core.j.PlayFormsMagicForJava._
 object main extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template3[String,Html,Html,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(heading: String)(script: Html)(content: Html):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(header: String)(script: Html)(content: Html):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.48*/("""
+Seq[Any](format.raw/*1.47*/("""
 
 """),format.raw/*3.1*/("""<!DOCTYPE html>
 
@@ -45,8 +45,7 @@ Seq[Any](format.raw/*1.48*/("""
     """),_display_(/*13.6*/script),format.raw/*13.12*/("""
   """),format.raw/*14.3*/("""</head>
   <body>
-    <h2 id="heading">"""),_display_(/*16.23*/heading),format.raw/*16.30*/("""</h2>
-    <div id="content">"""),_display_(/*17.24*/content),format.raw/*17.31*/("""</div>
+    <div id="content">"""),_display_(/*16.24*/content),format.raw/*16.31*/("""</div>
     <hr/>
   </body>
 </html>
@@ -55,9 +54,9 @@ Seq[Any](format.raw/*1.48*/("""
     }
   }
 
-  def render(heading:String,script:Html,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(heading)(script)(content)
+  def render(header:String,script:Html,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(header)(script)(content)
 
-  def f:((String) => (Html) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (heading) => (script) => (content) => apply(heading)(script)(content)
+  def f:((String) => (Html) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (header) => (script) => (content) => apply(header)(script)(content)
 
   def ref: this.type = this
 
@@ -66,11 +65,11 @@ Seq[Any](format.raw/*1.48*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 11 23:06:55 EST 2017
+                  DATE: Mon Dec 11 23:28:34 EST 2017
                   SOURCE: /vagrant/project/316_project/play-colleges/app/views/main.scala.html
-                  HASH: dcd3e072b095375ed6f2e58ce60b7856eff884ce
-                  MATRIX: 957->1|1098->47|1126->49|1625->521|1640->527|1695->561|1761->601|1788->607|1818->610|1884->649|1912->656|1968->685|1996->692
-                  LINES: 28->1|33->1|35->3|44->12|44->12|44->12|45->13|45->13|46->14|48->16|48->16|49->17|49->17
+                  HASH: 106e2c448e16cd15538cce99bfe243e3d5f4acb9
+                  MATRIX: 957->1|1097->46|1125->48|1624->520|1639->526|1694->560|1760->600|1787->606|1817->609|1884->649|1912->656
+                  LINES: 28->1|33->1|35->3|44->12|44->12|44->12|45->13|45->13|46->14|48->16|48->16
                   -- GENERATED --
               */
           
