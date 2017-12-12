@@ -4,6 +4,10 @@ body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
+h1 {
+  text-align: center;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
