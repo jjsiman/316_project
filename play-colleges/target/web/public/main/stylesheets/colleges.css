@@ -1,7 +1,11 @@
 h3 {
-  margin-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 15px;
   text-align: center;
   margin: auto;
+  min-width: 900px;
+  color: white;
+  background-color: #4484CE;
 }
 
 #uni_info {
@@ -14,16 +18,18 @@ h3 {
 }
 #uni_info p {
   margin-top: 5px;
+  color: #666;
 }
 
 #basic_info {
   width: 75%;
-  min-width: 500px;
+  min-width: 700px;
   margin: auto;
   table-layout: fixed;
   border-collapse: collapse;
-  background-color: #333;
+  background-color: #194980;
   text-align: center;
+  margin-bottom: 40px;
 }
 #mid {
   border-left: 3px solid white;
@@ -35,7 +41,7 @@ h3 {
   font-size: 15px;
   margin-bottom: 0px;
   padding-bottom: 0px;
-  color: #ccc;
+  color: #DDD;
   margin-top: 30px;
   font-weight: normal;
 }
@@ -44,25 +50,76 @@ h3 {
   font-size: 35px;
   color: white;
   margin-bottom: 30px;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 #gen {
-  width: 100%;
-  min-width: 500px;
+  width: 80%;
+  margin: auto;
+  min-width: 900px;
   table-layout: fixed;
 }
 #degree {
   width: 100%;
   text-align: center;
+  color: #444;
+  margin-top: 20px;
 }
 .deg_name {
-
+  font-size: 25px;
 }
 .sal {
-
+  font-size: 20px;
+  color: #444;
 }
 .sal_desc {
-  font-size: 15px;
+  font-size: 10px;
   font-style: italic;
+  color: #4484CE;
+}
+
+#degree_section {
+  background-color: #D9D9D9;
+  padding-bottom: 20px;
+  min-width: 900px;
+}
+
+#similar_schools {
+  width: 100%;
+  min-width: 900px;
+  table-layout: fixed;
+}
+#similar_schools h6 {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#search_other {
+  margin: auto;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+#search_other a {
+  text-decoration: none;
+  color: #256bbb;
+}
+
+h6 {
+  color: #444;
+}
+.school_list {
+  list-style-type: none;
+  text-align: center;
+}
+.school_list a {
+  text-decoration: none;
+  color: #444;
+}
+.school_list a:hover {
+  color: #256bbb;
+
 }

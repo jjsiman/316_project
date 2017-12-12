@@ -4,7 +4,7 @@
 		module="play-colleges-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20171109165434"
+		publication="20171212142754"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

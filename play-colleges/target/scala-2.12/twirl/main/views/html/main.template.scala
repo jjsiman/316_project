@@ -46,7 +46,6 @@ Seq[Any](format.raw/*1.47*/("""
   """),format.raw/*14.3*/("""</head>
   <body>
     <div id="content">"""),_display_(/*16.24*/content),format.raw/*16.31*/("""</div>
-    <hr/>
   </body>
 </html>
 """))
@@ -65,9 +64,9 @@ Seq[Any](format.raw/*1.47*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 11 23:28:34 EST 2017
-                  SOURCE: /vagrant/project/316_project/play-colleges/app/views/main.scala.html
-                  HASH: 106e2c448e16cd15538cce99bfe243e3d5f4acb9
+                  DATE: Tue Dec 12 16:47:18 EST 2017
+                  SOURCE: /vagrant/316_project/play-colleges/app/views/main.scala.html
+                  HASH: afdfa93d6f806c9a4f894db9ea6558ceb096d9c0
                   MATRIX: 957->1|1097->46|1125->48|1624->520|1639->526|1694->560|1760->600|1787->606|1817->609|1884->649|1912->656
                   LINES: 28->1|33->1|35->3|44->12|44->12|44->12|45->13|45->13|46->14|48->16|48->16
                   -- GENERATED --
