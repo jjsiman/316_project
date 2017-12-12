@@ -2,6 +2,10 @@
 
 
 @main(schoolInfo.name) { } {
+  <ul>
+    <li id="nav"><a href="@routes.Application.index()">Home</a></li>
+    <li id="nav"><a href="@routes.Application.about()">About</a></li>
+  </ul>
 
   <p>
     Located in @schoolInfo.city, @schoolInfo.state<br/>

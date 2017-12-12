@@ -33,38 +33,42 @@ object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
 Seq[Any](format.raw/*1.24*/("""
 
 """),_display_(/*3.2*/main("")/*3.10*/ {_display_(Seq[Any](format.raw/*3.12*/(""" """)))}/*3.14*/ {_display_(Seq[Any](format.raw/*3.16*/("""
-
-  """),format.raw/*5.3*/("""<div id="container">
+  """),format.raw/*4.3*/("""<ul>
+    <li id="nav"><a class="active" href=""""),_display_(/*5.43*/routes/*5.49*/.Application.index()),format.raw/*5.69*/("""">Home</a></li>
+    <li id="nav"><a href=""""),_display_(/*6.28*/routes/*6.34*/.Application.about()),format.raw/*6.54*/("""">About</a></li>
+  </ul>
+  
+  <div id="container">
 
   <div class="photobanner">
-    	<img class="first" src=""""),_display_(/*8.31*/routes/*8.37*/.Assets.at("images/col1.jpg")),format.raw/*8.66*/("""" alt="" />
-    	<img src=""""),_display_(/*9.17*/routes/*9.23*/.Assets.at("images/col2.jpg")),format.raw/*9.52*/("""" alt="" />
-    	<img src=""""),_display_(/*10.17*/routes/*10.23*/.Assets.at("images/col3.jpg")),format.raw/*10.52*/("""" alt="" />
-    	<img src=""""),_display_(/*11.17*/routes/*11.23*/.Assets.at("images/col4.jpg")),format.raw/*11.52*/("""" alt="" />
-    	<img src=""""),_display_(/*12.17*/routes/*12.23*/.Assets.at("images/col5.jpg")),format.raw/*12.52*/("""" alt="" />
-    	<img src=""""),_display_(/*13.17*/routes/*13.23*/.Assets.at("images/col6.jpg")),format.raw/*13.52*/("""" alt="" />
-    	<img src=""""),_display_(/*14.17*/routes/*14.23*/.Assets.at("images/col7.jpg")),format.raw/*14.52*/("""" alt="" />
-    	<img src=""""),_display_(/*15.17*/routes/*15.23*/.Assets.at("images/col1.jpg")),format.raw/*15.52*/("""" alt="" />
-    	<img src=""""),_display_(/*16.17*/routes/*16.23*/.Assets.at("images/col2.jpg")),format.raw/*16.52*/("""" alt="" />
-    	<img src=""""),_display_(/*17.17*/routes/*17.23*/.Assets.at("images/col3.jpg")),format.raw/*17.52*/("""" alt="" />
-      <img src=""""),_display_(/*18.18*/routes/*18.24*/.Assets.at("images/col4.jpg")),format.raw/*18.53*/("""" alt="" />
+    	<img class="first" src=""""),_display_(/*12.31*/routes/*12.37*/.Assets.at("images/col1.jpg")),format.raw/*12.66*/("""" alt="" />
+    	<img src=""""),_display_(/*13.17*/routes/*13.23*/.Assets.at("images/col2.jpg")),format.raw/*13.52*/("""" alt="" />
+    	<img src=""""),_display_(/*14.17*/routes/*14.23*/.Assets.at("images/col3.jpg")),format.raw/*14.52*/("""" alt="" />
+    	<img src=""""),_display_(/*15.17*/routes/*15.23*/.Assets.at("images/col4.jpg")),format.raw/*15.52*/("""" alt="" />
+    	<img src=""""),_display_(/*16.17*/routes/*16.23*/.Assets.at("images/col5.jpg")),format.raw/*16.52*/("""" alt="" />
+    	<img src=""""),_display_(/*17.17*/routes/*17.23*/.Assets.at("images/col6.jpg")),format.raw/*17.52*/("""" alt="" />
+    	<img src=""""),_display_(/*18.17*/routes/*18.23*/.Assets.at("images/col7.jpg")),format.raw/*18.52*/("""" alt="" />
+    	<img src=""""),_display_(/*19.17*/routes/*19.23*/.Assets.at("images/col1.jpg")),format.raw/*19.52*/("""" alt="" />
+    	<img src=""""),_display_(/*20.17*/routes/*20.23*/.Assets.at("images/col2.jpg")),format.raw/*20.52*/("""" alt="" />
+    	<img src=""""),_display_(/*21.17*/routes/*21.23*/.Assets.at("images/col3.jpg")),format.raw/*21.52*/("""" alt="" />
+      <img src=""""),_display_(/*22.18*/routes/*22.24*/.Assets.at("images/col4.jpg")),format.raw/*22.53*/("""" alt="" />
     </div>
   </div>
 
-  <form id="searchbox" method="post" action=""""),_display_(/*22.47*/routes/*22.53*/.Application.viewSchoolSearch()),format.raw/*22.84*/("""">
+  <form id="searchbox" method="post" action=""""),_display_(/*26.47*/routes/*26.53*/.Application.viewSchoolSearch()),format.raw/*26.84*/("""">
     <p>Search for a school:</p>
-    """),_display_(/*24.6*/helper/*24.12*/.CSRF.formField),format.raw/*24.27*/("""
-    """),format.raw/*25.5*/("""<input list="schools" type="text" name="name" placeholder="School name"><br/>
+    """),_display_(/*28.6*/helper/*28.12*/.CSRF.formField),format.raw/*28.27*/("""
+    """),format.raw/*29.5*/("""<input list="schools" type="text" name="name" placeholder="School name"><br/>
       <datalist id="schools">
-        """),_display_(/*27.10*/for(name <- school) yield /*27.29*/ {_display_(Seq[Any](format.raw/*27.31*/("""
-          """),format.raw/*28.11*/("""<option value=""""),_display_(/*28.27*/name),format.raw/*28.31*/(""""> <a href=""""),_display_(/*28.44*/routes/*28.50*/.Application.viewSchool(name)),format.raw/*28.79*/(""""> """),_display_(/*28.83*/name),format.raw/*28.87*/(""" """),format.raw/*28.88*/("""</a> </option>
-        """)))}),format.raw/*29.10*/("""
-      """),format.raw/*30.7*/("""</datalist>
+        """),_display_(/*31.10*/for(name <- school) yield /*31.29*/ {_display_(Seq[Any](format.raw/*31.31*/("""
+          """),format.raw/*32.11*/("""<option value=""""),_display_(/*32.27*/name),format.raw/*32.31*/(""""> <a href=""""),_display_(/*32.44*/routes/*32.50*/.Application.viewSchool(name)),format.raw/*32.79*/(""""> """),_display_(/*32.83*/name),format.raw/*32.87*/(""" """),format.raw/*32.88*/("""</a> </option>
+        """)))}),format.raw/*33.10*/("""
+      """),format.raw/*34.7*/("""</datalist>
     <input type="submit" value="Go!"/>
   </form>
 
   </p>
-""")))}),format.raw/*35.2*/("""
+""")))}),format.raw/*39.2*/("""
 """))
       }
     }
@@ -81,11 +85,11 @@ Seq[Any](format.raw/*1.24*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 11 17:19:49 EST 2017
+                  DATE: Mon Dec 11 23:06:18 EST 2017
                   SOURCE: /vagrant/project/316_project/play-colleges/app/views/index.scala.html
-                  HASH: 8713020952e97cff81c96adf16b308969323a7f1
-                  MATRIX: 954->1|1071->23|1099->26|1115->34|1154->36|1174->38|1213->40|1243->44|1349->124|1363->130|1412->159|1466->187|1480->193|1529->222|1584->250|1599->256|1649->285|1704->313|1719->319|1769->348|1824->376|1839->382|1889->411|1944->439|1959->445|2009->474|2064->502|2079->508|2129->537|2184->565|2199->571|2249->600|2304->628|2319->634|2369->663|2424->691|2439->697|2489->726|2545->755|2560->761|2610->790|2716->869|2731->875|2783->906|2849->946|2864->952|2900->967|2932->972|3076->1089|3111->1108|3151->1110|3190->1121|3233->1137|3258->1141|3298->1154|3313->1160|3363->1189|3394->1193|3419->1197|3448->1198|3503->1222|3537->1229|3637->1299
-                  LINES: 28->1|33->1|35->3|35->3|35->3|35->3|35->3|37->5|40->8|40->8|40->8|41->9|41->9|41->9|42->10|42->10|42->10|43->11|43->11|43->11|44->12|44->12|44->12|45->13|45->13|45->13|46->14|46->14|46->14|47->15|47->15|47->15|48->16|48->16|48->16|49->17|49->17|49->17|50->18|50->18|50->18|54->22|54->22|54->22|56->24|56->24|56->24|57->25|59->27|59->27|59->27|60->28|60->28|60->28|60->28|60->28|60->28|60->28|60->28|60->28|61->29|62->30|67->35
+                  HASH: a26af6a94923a7a5a593e53722fe818ed91ad71c
+                  MATRIX: 954->1|1071->23|1099->26|1115->34|1154->36|1174->38|1213->40|1242->43|1315->90|1329->96|1369->116|1438->159|1452->165|1492->185|1629->295|1644->301|1694->330|1749->358|1764->364|1814->393|1869->421|1884->427|1934->456|1989->484|2004->490|2054->519|2109->547|2124->553|2174->582|2229->610|2244->616|2294->645|2349->673|2364->679|2414->708|2469->736|2484->742|2534->771|2589->799|2604->805|2654->834|2709->862|2724->868|2774->897|2830->926|2845->932|2895->961|3001->1040|3016->1046|3068->1077|3134->1117|3149->1123|3185->1138|3217->1143|3361->1260|3396->1279|3436->1281|3475->1292|3518->1308|3543->1312|3583->1325|3598->1331|3648->1360|3679->1364|3704->1368|3733->1369|3788->1393|3822->1400|3922->1470
+                  LINES: 28->1|33->1|35->3|35->3|35->3|35->3|35->3|36->4|37->5|37->5|37->5|38->6|38->6|38->6|44->12|44->12|44->12|45->13|45->13|45->13|46->14|46->14|46->14|47->15|47->15|47->15|48->16|48->16|48->16|49->17|49->17|49->17|50->18|50->18|50->18|51->19|51->19|51->19|52->20|52->20|52->20|53->21|53->21|53->21|54->22|54->22|54->22|58->26|58->26|58->26|60->28|60->28|60->28|61->29|63->31|63->31|63->31|64->32|64->32|64->32|64->32|64->32|64->32|64->32|64->32|64->32|65->33|66->34|71->39
                   -- GENERATED --
               */
           

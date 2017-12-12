@@ -45,15 +45,8 @@ Seq[Any](format.raw/*1.48*/("""
     """),_display_(/*13.6*/script),format.raw/*13.12*/("""
   """),format.raw/*14.3*/("""</head>
   <body>
-
-    <ul>
-      <li id="nav"><a class="active" href=""""),_display_(/*18.45*/routes/*18.51*/.Application.index()),format.raw/*18.71*/("""">Home</a></li>
-      <li id="nav"><a href="#search">Search</a></li>
-      <li id="nav"><a href="#about">About</a></li>
-    </ul>
-    <h1>College Database</h1>
-    <h2 id="heading">"""),_display_(/*23.23*/heading),format.raw/*23.30*/("""</h2>
-    <div id="content">"""),_display_(/*24.24*/content),format.raw/*24.31*/("""</div>
+    <h2 id="heading">"""),_display_(/*16.23*/heading),format.raw/*16.30*/("""</h2>
+    <div id="content">"""),_display_(/*17.24*/content),format.raw/*17.31*/("""</div>
     <hr/>
   </body>
 </html>
@@ -73,11 +66,11 @@ Seq[Any](format.raw/*1.48*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 11 15:27:39 EST 2017
+                  DATE: Mon Dec 11 23:06:55 EST 2017
                   SOURCE: /vagrant/project/316_project/play-colleges/app/views/main.scala.html
-                  HASH: b7963b7fd057e3c38d6bdcaed80bab2c591d983d
-                  MATRIX: 957->1|1098->47|1126->49|1625->521|1640->527|1695->561|1761->601|1788->607|1818->610|1916->681|1931->687|1972->707|2181->889|2209->896|2265->925|2293->932
-                  LINES: 28->1|33->1|35->3|44->12|44->12|44->12|45->13|45->13|46->14|50->18|50->18|50->18|55->23|55->23|56->24|56->24
+                  HASH: dcd3e072b095375ed6f2e58ce60b7856eff884ce
+                  MATRIX: 957->1|1098->47|1126->49|1625->521|1640->527|1695->561|1761->601|1788->607|1818->610|1884->649|1912->656|1968->685|1996->692
+                  LINES: 28->1|33->1|35->3|44->12|44->12|44->12|45->13|45->13|46->14|48->16|48->16|49->17|49->17
                   -- GENERATED --
               */
           

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/vagrant/project/316_project/play-colleges/conf/routes
-// @DATE:Thu Nov 09 16:55:29 EST 2017
+// @DATE:Mon Dec 11 21:39:13 EST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -12,7 +12,7 @@ import _root_.play.libs.F
 // @LINE:5
 package controllers.javascript {
 
-  // @LINE:12
+  // @LINE:13
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -20,7 +20,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:12
+    // @LINE:13
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -40,6 +40,16 @@ package controllers.javascript {
     }
 
   
+    // @LINE:6
+    def about: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.about",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "About"})
+        }
+      """
+    )
+  
     // @LINE:5
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.index",
@@ -50,7 +60,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:9
+    // @LINE:10
     def viewSchoolSearch: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.viewSchoolSearch",
       """
@@ -60,7 +70,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:6
+    // @LINE:7
     def viewSchool: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.viewSchool",
       """

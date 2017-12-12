@@ -52,8 +52,7 @@ ul {
 }
 
 #nav {
-    float: left;
-    border-right:1px solid #000;
+    min-width: 500px;
 }
 
 #nav:last-child {
@@ -62,9 +61,11 @@ ul {
 
 #nav a {
     display: block;
+    float: left;
     color: white;
+    width: auto;
     text-align: center;
-    padding: 14px 16px;
+    padding: 20px 23.1%;
     text-decoration: none;
 }
 

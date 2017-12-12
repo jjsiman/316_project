@@ -1,6 +1,11 @@
 @(message: String)
 
 @main("") { } {
+  <ul>
+    <li id="nav"><a href="@routes.Application.index()">Home</a></li>
+    <li id="nav"><a class="active" href="@routes.Application.about()">About</a></li>
+  </ul>
+
   <section id="about_banner">
     <div class="about_inner">
       <h1>About Us</h1>
