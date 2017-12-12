@@ -23,6 +23,10 @@ public class Application extends Controller {
         return ok(index.render(collegesDB.getAllSchoolNames()));
     }
 
+    public Result about() throws SQLException {
+      return ok(about.render(""));
+    }
+
     public Result viewSchool(String name) throws SQLException {
       collegesDB.SchoolInfo schoolInfo = collegesDB.getSchoolInfo(name);
       collegesDB.CityInfo cityInfo = collegesDB.getCityInfo(name);
