@@ -12,9 +12,47 @@ ul {
     background-color: #333;
 }
 
+#about_banner {
+    align-items: center;
+    justify-content: center;
+    padding: 5em 0 0 0;
+    background-image: url("../images/col1.jpg");
+    filter: grey;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60 vh !important;
+    text-align: center;
+}
+
+#about_banner .about_inner {
+  transform: scale(1.0);
+  transition: opacity 1s ease, trasnform 1s ease;
+  opacity: 1;
+  z-index: 2;
+}
+#about_banner h1 {
+  font-size: 4em;
+  font-family: sans-serif;
+  color: #FFF;
+}
+
+#about_banner p {
+  color: #FFF;
+  font-size: 1.75em;
+}
+
+#about_info {
+  align-items: center;
+  justify-content: center;
+}
+
+#about_info p {
+  padding: 5em 0 4em 0;
+}
+
 #nav {
-    float: left;
-    border-right:1px solid #000;
+    min-width: 500px;
 }
 
 #nav:last-child {
@@ -23,9 +61,11 @@ ul {
 
 #nav a {
     display: block;
+    float: left;
     color: white;
+    width: auto;
     text-align: center;
-    padding: 14px 16px;
+    padding: 20px 23.1%;
     text-decoration: none;
 }
 

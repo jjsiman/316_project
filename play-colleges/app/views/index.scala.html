@@ -1,7 +1,11 @@
 @(school: List[String])
 
 @main("") { } {
-
+  <ul>
+    <li id="nav"><a class="active" href="@routes.Application.index()">Home</a></li>
+    <li id="nav"><a href="@routes.Application.about()">About</a></li>
+  </ul>
+  
   <div id="container">
 
   <div class="photobanner">

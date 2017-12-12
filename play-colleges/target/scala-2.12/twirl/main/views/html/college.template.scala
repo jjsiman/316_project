@@ -25,63 +25,66 @@ import play.core.j.PlayFormsMagicForJava._
 object college extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template5[models.collegesDB.SchoolInfo,models.collegesDB.CityInfo,List[String],List[String],List[String],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(schoolInfo: models.collegesDB.SchoolInfo, cityInfo: models.collegesDB.CityInfo, similarSizedSchools: List[String],similarTuitionSchools: List[String],closeSchools: List[String]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(schoolInfo: models.collegesDB.SchoolInfo,cityInfo: models.collegesDB.CityInfo, similarSizedSchools: List[String],similarTuitionSchools: List[String],closeSchools: List[String]):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.180*/("""
+Seq[Any](format.raw/*1.179*/("""
 
-"""),_display_(/*3.2*/main(schoolInfo.name)/*3.23*/ {_display_(Seq[Any](format.raw/*3.25*/(""" """)))}/*3.27*/ {_display_(Seq[Any](format.raw/*3.29*/("""
-"""),format.raw/*4.1*/("""<div>
-  <span id="school_facts">
-    <p>
-      Located in """),_display_(/*7.19*/schoolInfo/*7.29*/.city),format.raw/*7.34*/(""", """),_display_(/*7.37*/schoolInfo/*7.47*/.state),format.raw/*7.53*/("""<br/>
-      Size: """),_display_(/*8.14*/schoolInfo/*8.24*/.size),format.raw/*8.29*/("""<br/>
-      Rank: """),_display_(/*9.14*/schoolInfo/*9.24*/.rank),format.raw/*9.29*/("""<br/>
-      Tuition: """),_display_(/*10.17*/schoolInfo/*10.27*/.tuition),format.raw/*10.35*/("""<br/>
-      <br/>
-    </p>
-    <p>
-      Some facts about """),_display_(/*14.25*/schoolInfo/*14.35*/.city),format.raw/*14.40*/(""", """),_display_(/*14.43*/schoolInfo/*14.53*/.state),format.raw/*14.59*/(""", where available:<br/>
-      Population: """),_display_(/*15.20*/cityInfo/*15.28*/.population),format.raw/*15.39*/("""<br/>
-      Median resident age: """),_display_(/*16.29*/cityInfo/*16.37*/.medianResidentAge),format.raw/*16.55*/("""<br/>
-      Percentage of residents with a high school degree: """),_display_(/*17.59*/cityInfo/*17.67*/.HSDegree),format.raw/*17.76*/("""%<br/>
-      Median income: """),_display_(/*18.23*/cityInfo/*18.31*/.medianIncome),format.raw/*18.44*/("""<br/>
-      Percentage of residents living below the poverty line: """),_display_(/*19.63*/cityInfo/*19.71*/.belowPovertyLine),format.raw/*19.88*/("""%<br/>
-      Percentage of residents that were born outside the US: """),_display_(/*20.63*/cityInfo/*20.71*/.foreignBorn),format.raw/*20.83*/("""%<br/>
-      Crime index: """),_display_(/*21.21*/cityInfo/*21.29*/.crimeIndex),format.raw/*21.40*/("""<br/>
-    </p>
-  </span>
-<span id="map">
 
-  
+"""),_display_(/*4.2*/main(schoolInfo.name)/*4.23*/ {_display_(Seq[Any](format.raw/*4.25*/(""" """)))}/*4.27*/ {_display_(Seq[Any](format.raw/*4.29*/("""
+  """),format.raw/*5.3*/("""<ul>
+    <li id="nav"><a href=""""),_display_(/*6.28*/routes/*6.34*/.Application.index()),format.raw/*6.54*/("""">Home</a></li>
+    <li id="nav"><a href=""""),_display_(/*7.28*/routes/*7.34*/.Application.about()),format.raw/*7.54*/("""">About</a></li>
+  </ul>
 
-</span>
-
-</div>
+  <p>
+    Located in """),_display_(/*11.17*/schoolInfo/*11.27*/.city),format.raw/*11.32*/(""", """),_display_(/*11.35*/schoolInfo/*11.45*/.state),format.raw/*11.51*/("""<br/>
+    Size: """),_display_(/*12.12*/schoolInfo/*12.22*/.size),format.raw/*12.27*/("""<br/>
+    Rank: """),_display_(/*13.12*/schoolInfo/*13.22*/.rank),format.raw/*13.27*/("""<br/>
+    Tuition: """),_display_(/*14.15*/schoolInfo/*14.25*/.tuition),format.raw/*14.33*/("""<br/>
+    <br/>
+    Top Degrees at """),_display_(/*16.21*/schoolInfo/*16.31*/.name),format.raw/*16.36*/("""
+    """),_display_(/*17.6*/for((name,salaries) <- schoolInfo.degrees) yield /*17.48*/ {_display_(Seq[Any](format.raw/*17.50*/("""
+      """),format.raw/*18.7*/("""<li>"""),_display_(/*18.12*/name),format.raw/*18.16*/("""</li>
+      Average starting salary: """),_display_(/*19.33*/salaries(0)),format.raw/*19.44*/("""<br/>
+      Average 10 year salary: """),_display_(/*20.32*/salaries(1)),format.raw/*20.43*/("""<br/>
+    """)))}),format.raw/*21.6*/("""
+    """),format.raw/*22.5*/("""<br/>
+  </p>
+  <p>
+    Some facts about """),_display_(/*25.23*/schoolInfo/*25.33*/.city),format.raw/*25.38*/(""", """),_display_(/*25.41*/schoolInfo/*25.51*/.state),format.raw/*25.57*/("""<br/>
+    Population: """),_display_(/*26.18*/cityInfo/*26.26*/.population),format.raw/*26.37*/("""<br/>
+    Median resident age: """),_display_(/*27.27*/cityInfo/*27.35*/.medianResidentAge),format.raw/*27.53*/("""<br/>
+    Percentage of residents with a high school degree: """),_display_(/*28.57*/cityInfo/*28.65*/.HSDegree),format.raw/*28.74*/("""%<br/>
+    Median income: """),_display_(/*29.21*/cityInfo/*29.29*/.medianIncome),format.raw/*29.42*/("""<br/>
+    Percentage of residents living below the poverty line: """),_display_(/*30.61*/cityInfo/*30.69*/.belowPovertyLine),format.raw/*30.86*/("""%<br/>
+    Percentage of residents that were born outside the US: """),_display_(/*31.61*/cityInfo/*31.69*/.foreignBorn),format.raw/*31.81*/("""%<br/>
+    Crime index: """),_display_(/*32.19*/cityInfo/*32.27*/.crimeIndex),format.raw/*32.38*/("""<br/>
+  </p>
   <p>
       Check out these schools with similar sizes!
-      """),_display_(/*33.8*/for(name <- similarSizedSchools) yield /*33.40*/ {_display_(Seq[Any](format.raw/*33.42*/("""
-        """),format.raw/*34.9*/("""<li> <a href=""""),_display_(/*34.24*/routes/*34.30*/.Application.viewSchool(name)),format.raw/*34.59*/(""""> """),_display_(/*34.63*/name),format.raw/*34.67*/(""" """),format.raw/*34.68*/("""</a> </li>
-      """)))}),format.raw/*35.8*/("""
-  """),format.raw/*36.3*/("""</p>
+      """),_display_(/*36.8*/for(name <- similarSizedSchools) yield /*36.40*/ {_display_(Seq[Any](format.raw/*36.42*/("""
+        """),format.raw/*37.9*/("""<li> <a href=""""),_display_(/*37.24*/routes/*37.30*/.Application.viewSchool(name)),format.raw/*37.59*/(""""> """),_display_(/*37.63*/name),format.raw/*37.67*/(""" """),format.raw/*37.68*/("""</a> </li>
+      """)))}),format.raw/*38.8*/("""
+  """),format.raw/*39.3*/("""</p>
   <p>
       Check out these schools with similar tuition!
-      """),_display_(/*39.8*/for(name <- similarTuitionSchools) yield /*39.42*/ {_display_(Seq[Any](format.raw/*39.44*/("""
-        """),format.raw/*40.9*/("""<li> <a href=""""),_display_(/*40.24*/routes/*40.30*/.Application.viewSchool(name)),format.raw/*40.59*/(""""> """),_display_(/*40.63*/name),format.raw/*40.67*/(""" """),format.raw/*40.68*/("""</a> </li>
-      """)))}),format.raw/*41.8*/("""
-  """),format.raw/*42.3*/("""</p>
+      """),_display_(/*42.8*/for(name <- similarTuitionSchools) yield /*42.42*/ {_display_(Seq[Any](format.raw/*42.44*/("""
+        """),format.raw/*43.9*/("""<li> <a href=""""),_display_(/*43.24*/routes/*43.30*/.Application.viewSchool(name)),format.raw/*43.59*/(""""> """),_display_(/*43.63*/name),format.raw/*43.67*/(""" """),format.raw/*43.68*/("""</a> </li>
+      """)))}),format.raw/*44.8*/("""
+  """),format.raw/*45.3*/("""</p>
   <p>
       Check out these schools close by!
-      """),_display_(/*45.8*/for(name <- closeSchools) yield /*45.33*/ {_display_(Seq[Any](format.raw/*45.35*/("""
-        """),format.raw/*46.9*/("""<li> <a href=""""),_display_(/*46.24*/routes/*46.30*/.Application.viewSchool(name)),format.raw/*46.59*/(""""> """),_display_(/*46.63*/name),format.raw/*46.67*/(""" """),format.raw/*46.68*/("""</a> </li>
-      """)))}),format.raw/*47.8*/("""
-  """),format.raw/*48.3*/("""</p>
+      """),_display_(/*48.8*/for(name <- closeSchools) yield /*48.33*/ {_display_(Seq[Any](format.raw/*48.35*/("""
+        """),format.raw/*49.9*/("""<li> <a href=""""),_display_(/*49.24*/routes/*49.30*/.Application.viewSchool(name)),format.raw/*49.59*/(""""> """),_display_(/*49.63*/name),format.raw/*49.67*/(""" """),format.raw/*49.68*/("""</a> </li>
+      """)))}),format.raw/*50.8*/("""
+  """),format.raw/*51.3*/("""</p>
   <p>
-    Search <a href=""""),_display_(/*50.22*/routes/*50.28*/.Application.index()),format.raw/*50.48*/("""">other schools</a>.
+    Search <a href=""""),_display_(/*53.22*/routes/*53.28*/.Application.index()),format.raw/*53.48*/("""">other schools</a>.
   </p>
-""")))}),format.raw/*52.2*/("""
+""")))}),format.raw/*55.2*/("""
 """))
       }
     }
@@ -98,11 +101,11 @@ Seq[Any](format.raw/*1.180*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 11 16:56:15 EST 2017
+                  DATE: Mon Dec 11 23:05:14 EST 2017
                   SOURCE: /vagrant/project/316_project/play-colleges/app/views/college.scala.html
-                  HASH: 4db9f4e1db1c7a65c13e82e121dede812946f644
-                  MATRIX: 1038->1|1312->179|1340->182|1369->203|1408->205|1428->207|1467->209|1494->210|1579->269|1597->279|1622->284|1651->287|1669->297|1695->303|1740->322|1758->332|1783->337|1828->356|1846->366|1871->371|1920->393|1939->403|1968->411|2054->470|2073->480|2099->485|2129->488|2148->498|2175->504|2245->547|2262->555|2294->566|2355->600|2372->608|2411->626|2502->690|2519->698|2549->707|2605->736|2622->744|2656->757|2751->825|2768->833|2806->850|2902->919|2919->927|2952->939|3006->966|3023->974|3055->985|3206->1110|3254->1142|3294->1144|3330->1153|3372->1168|3387->1174|3437->1203|3468->1207|3493->1211|3522->1212|3570->1230|3600->1233|3696->1303|3746->1337|3786->1339|3822->1348|3864->1363|3879->1369|3929->1398|3960->1402|3985->1406|4014->1407|4062->1425|4092->1428|4176->1486|4217->1511|4257->1513|4293->1522|4335->1537|4350->1543|4400->1572|4431->1576|4456->1580|4485->1581|4533->1599|4563->1602|4622->1634|4637->1640|4678->1660|4737->1689
-                  LINES: 28->1|33->1|35->3|35->3|35->3|35->3|35->3|36->4|39->7|39->7|39->7|39->7|39->7|39->7|40->8|40->8|40->8|41->9|41->9|41->9|42->10|42->10|42->10|46->14|46->14|46->14|46->14|46->14|46->14|47->15|47->15|47->15|48->16|48->16|48->16|49->17|49->17|49->17|50->18|50->18|50->18|51->19|51->19|51->19|52->20|52->20|52->20|53->21|53->21|53->21|65->33|65->33|65->33|66->34|66->34|66->34|66->34|66->34|66->34|66->34|67->35|68->36|71->39|71->39|71->39|72->40|72->40|72->40|72->40|72->40|72->40|72->40|73->41|74->42|77->45|77->45|77->45|78->46|78->46|78->46|78->46|78->46|78->46|78->46|79->47|80->48|82->50|82->50|82->50|84->52
+                  HASH: 8dc9ec39d4ee4bcfddfefb04e058dea224dc1ea5
+                  MATRIX: 1038->1|1311->178|1340->182|1369->203|1408->205|1428->207|1467->209|1496->212|1554->244|1568->250|1608->270|1677->313|1691->319|1731->339|1806->387|1825->397|1851->402|1881->405|1900->415|1927->421|1971->438|1990->448|2016->453|2060->470|2079->480|2105->485|2152->505|2171->515|2200->523|2263->559|2282->569|2308->574|2340->580|2398->622|2438->624|2472->631|2504->636|2529->640|2594->678|2626->689|2690->726|2722->737|2763->748|2795->753|2863->794|2882->804|2908->809|2938->812|2957->822|2984->828|3034->851|3051->859|3083->870|3142->902|3159->910|3198->928|3287->990|3304->998|3334->1007|3388->1034|3405->1042|3439->1055|3532->1121|3549->1129|3587->1146|3681->1213|3698->1221|3731->1233|3783->1258|3800->1266|3832->1277|3934->1353|3982->1385|4022->1387|4058->1396|4100->1411|4115->1417|4165->1446|4196->1450|4221->1454|4250->1455|4298->1473|4328->1476|4424->1546|4474->1580|4514->1582|4550->1591|4592->1606|4607->1612|4657->1641|4688->1645|4713->1649|4742->1650|4790->1668|4820->1671|4904->1729|4945->1754|4985->1756|5021->1765|5063->1780|5078->1786|5128->1815|5159->1819|5184->1823|5213->1824|5261->1842|5291->1845|5350->1877|5365->1883|5406->1903|5465->1932
+                  LINES: 28->1|33->1|36->4|36->4|36->4|36->4|36->4|37->5|38->6|38->6|38->6|39->7|39->7|39->7|43->11|43->11|43->11|43->11|43->11|43->11|44->12|44->12|44->12|45->13|45->13|45->13|46->14|46->14|46->14|48->16|48->16|48->16|49->17|49->17|49->17|50->18|50->18|50->18|51->19|51->19|52->20|52->20|53->21|54->22|57->25|57->25|57->25|57->25|57->25|57->25|58->26|58->26|58->26|59->27|59->27|59->27|60->28|60->28|60->28|61->29|61->29|61->29|62->30|62->30|62->30|63->31|63->31|63->31|64->32|64->32|64->32|68->36|68->36|68->36|69->37|69->37|69->37|69->37|69->37|69->37|69->37|70->38|71->39|74->42|74->42|74->42|75->43|75->43|75->43|75->43|75->43|75->43|75->43|76->44|77->45|80->48|80->48|80->48|81->49|81->49|81->49|81->49|81->49|81->49|81->49|82->50|83->51|85->53|85->53|85->53|87->55
                   -- GENERATED --
               */
           

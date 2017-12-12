@@ -2,6 +2,11 @@
 
 @main("") { <link rel="stylesheet" href="@routes.Assets.at("stylesheets/colleges.css")" type="text/css" media="screen"/> } {
 
+@main(schoolInfo.name) { } {
+  <ul>
+    <li id="nav"><a href="@routes.Application.index()">Home</a></li>
+    <li id="nav"><a href="@routes.Application.about()">About</a></li>
+  </ul>
   <div id="uni_info">
     <h1>@schoolInfo.name</h1>
     <p>@schoolInfo.city, @schoolInfo.state<p/>
