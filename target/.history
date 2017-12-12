@@ -1,0 +1,7 @@
+run 
+ls
+cd -
+quit
+run sbt
+kill
+/q

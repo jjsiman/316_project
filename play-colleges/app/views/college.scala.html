@@ -1,23 +1,33 @@
 @(schoolInfo: models.collegesDB.SchoolInfo, cityInfo: models.collegesDB.CityInfo, similarSizedSchools: List[String],similarTuitionSchools: List[String],closeSchools: List[String])
 
 @main(schoolInfo.name) { } {
-  <p>
-    Located in @schoolInfo.city, @schoolInfo.state<br/>
-    Size: @schoolInfo.size<br/>
-    Rank: @schoolInfo.rank<br/>
-    Tuition: @schoolInfo.tuition<br/>
-    <br/>
-  </p>
-  <p>
-    Some facts about @schoolInfo.city, @schoolInfo.state, where available:<br/>
-    Population: @cityInfo.population<br/>
-    Median resident age: @cityInfo.medianResidentAge<br/>
-    Percentage of residents with a high school degree: @cityInfo.HSDegree%<br/>
-    Median income: @cityInfo.medianIncome<br/>
-    Percentage of residents living below the poverty line: @cityInfo.belowPovertyLine%<br/>
-    Percentage of residents that were born outside the US: @cityInfo.foreignBorn%<br/>
-    Crime index: @cityInfo.crimeIndex<br/>
-  </p>
+<div>
+  <span id="school_facts">
+    <p>
+      Located in @schoolInfo.city, @schoolInfo.state<br/>
+      Size: @schoolInfo.size<br/>
+      Rank: @schoolInfo.rank<br/>
+      Tuition: @schoolInfo.tuition<br/>
+      <br/>
+    </p>
+    <p>
+      Some facts about @schoolInfo.city, @schoolInfo.state, where available:<br/>
+      Population: @cityInfo.population<br/>
+      Median resident age: @cityInfo.medianResidentAge<br/>
+      Percentage of residents with a high school degree: @cityInfo.HSDegree%<br/>
+      Median income: @cityInfo.medianIncome<br/>
+      Percentage of residents living below the poverty line: @cityInfo.belowPovertyLine%<br/>
+      Percentage of residents that were born outside the US: @cityInfo.foreignBorn%<br/>
+      Crime index: @cityInfo.crimeIndex<br/>
+    </p>
+  </span>
+<span id="map">
+
+  
+
+</span>
+
+</div>
   <p>
       Check out these schools with similar sizes!
       @for(name <- similarSizedSchools) {

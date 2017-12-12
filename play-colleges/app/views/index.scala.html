@@ -1,6 +1,24 @@
 @(school: List[String])
 
 @main("") { } {
+
+  <div id="container">
+
+  <div class="photobanner">
+    	<img class="first" src="@routes.Assets.at("images/col1.jpg")" alt="" />
+    	<img src="@routes.Assets.at("images/col2.jpg")" alt="" />
+    	<img src="@routes.Assets.at("images/col3.jpg")" alt="" />
+    	<img src="@routes.Assets.at("images/col4.jpg")" alt="" />
+    	<img src="@routes.Assets.at("images/col5.jpg")" alt="" />
+    	<img src="@routes.Assets.at("images/col6.jpg")" alt="" />
+    	<img src="@routes.Assets.at("images/col7.jpg")" alt="" />
+    	<img src="@routes.Assets.at("images/col1.jpg")" alt="" />
+    	<img src="@routes.Assets.at("images/col2.jpg")" alt="" />
+    	<img src="@routes.Assets.at("images/col3.jpg")" alt="" />
+      <img src="@routes.Assets.at("images/col4.jpg")" alt="" />
+    </div>
+  </div>
+
   <form id="searchbox" method="post" action="@routes.Application.viewSchoolSearch()">
     <p>Search for a school:</p>
     @helper.CSRF.formField
@@ -12,5 +30,6 @@
       </datalist>
     <input type="submit" value="Go!"/>
   </form>
+
   </p>
 }
