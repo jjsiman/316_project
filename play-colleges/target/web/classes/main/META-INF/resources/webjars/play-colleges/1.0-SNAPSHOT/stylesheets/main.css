@@ -20,7 +20,7 @@ ul {
     align-items: center;
     justify-content: center;
     padding: 4em 0 3em 0;
-    background-image: url("../images/col1.jpg"), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-image: url("../images/col8.jpg"), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
 	background-blend-mode: overlay;
     filter: grey;
     background-position: center;
