@@ -20,15 +20,14 @@
   </div>
 
   <form id="searchbox" method="post" action="@routes.Application.viewSchoolSearch()">
-    <p>Search for a school:</p>
     @helper.CSRF.formField
-    <input list="schools" type="text" name="name" placeholder="School name"><br/>
+    <input list="schools" type="text" name="name" placeholder="Search for a School..."><br/>
       <datalist id="schools">
         @for(name <- school) {
           <option value="@name"> <a href="@routes.Application.viewSchool(name)"> @name </a> </option>
         }
       </datalist>
-    <input type="submit" value="Go!"/>
+    <input id="go" type="submit" value="GO"/>
   </form>
 
   </p>

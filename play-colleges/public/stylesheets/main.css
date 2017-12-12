@@ -54,6 +54,23 @@ ul {
   padding: 2em 14em 0 14em;
 }
 
+#go {
+	background-color: black;
+	border:none;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: sans-serif;
+	color: white;
+	padding: 10px 40px;
+	text-align: center;
+	display: inline-block;
+	border-radius: 2px;
+}
+
+#go:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 #nav {
     float: left;
     border-right:1px solid #000;
