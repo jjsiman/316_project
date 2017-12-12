@@ -1,36 +1,82 @@
 @(schoolInfo: models.collegesDB.SchoolInfo,cityInfo: models.collegesDB.CityInfo, similarSizedSchools: List[String],similarTuitionSchools: List[String],closeSchools: List[String])
 
+@main("") { <link rel="stylesheet" href="@routes.Assets.at("stylesheets/colleges.css")" type="text/css" media="screen"/> } {
 
 @main(schoolInfo.name) { } {
   <ul>
     <li id="nav"><a href="@routes.Application.index()">Home</a></li>
     <li id="nav"><a href="@routes.Application.about()">About</a></li>
   </ul>
+  <div id="uni_info">
+    <h1>@schoolInfo.name</h1>
+    <p>@schoolInfo.city, @schoolInfo.state<p/>
+  </div>
+    <table id="basic_info">
+      <tr>
+        <td><div class="data">
+          <h1>Rank</h1>
+          <p>#@schoolInfo.rank<p>
+        </div></th>
+        <td id="mid"><div class="data">
+          <h1>Size</h1>
+          <p>@schoolInfo.size</p>
+        </div></th>
+        <td><div class="data">
+          <h1>Tuition</h1>
+          <p>$@schoolInfo.tuition<p>
+        </div></th>
+      </tr>
+    </table>
 
-  <p>
-    Located in @schoolInfo.city, @schoolInfo.state<br/>
-    Size: @schoolInfo.size<br/>
-    Rank: @schoolInfo.rank<br/>
-    Tuition: @schoolInfo.tuition<br/>
-    <br/>
-    Top Degrees at @schoolInfo.name
-    @for((name,salaries) <- schoolInfo.degrees) {
-      <li>@name</li>
-      Average starting salary: @salaries(0)<br/>
-      Average 10 year salary: @salaries(1)<br/>
-    }
-    <br/>
-  </p>
-  <p>
-    Some facts about @schoolInfo.city, @schoolInfo.state<br/>
-    Population: @cityInfo.population<br/>
-    Median resident age: @cityInfo.medianResidentAge<br/>
-    Percentage of residents with a high school degree: @cityInfo.HSDegree%<br/>
-    Median income: @cityInfo.medianIncome<br/>
-    Percentage of residents living below the poverty line: @cityInfo.belowPovertyLine%<br/>
-    Percentage of residents that were born outside the US: @cityInfo.foreignBorn%<br/>
-    Crime index: @cityInfo.crimeIndex<br/>
-  </p>
+    <h3>Top Degrees at @schoolInfo.name</h3>
+    <table id="gen">
+      <tr>
+        @for((name,salaries) <- schoolInfo.degrees) {
+          <td>
+            <table id="degree">
+              <tr class="deg_name"><th>@name</th></tr>
+              <tr class="sal_desc"><td>Average starting salary</td></tr>
+              <tr class="sal"><td>$@salaries(0)</td></tr>
+              <tr class="sal_desc"><td>Average 10 year salary</td></tr>
+              <tr class="sal"><td>$@salaries(1)</td></tr>
+            </table>
+          </td>
+        }
+      </tr>
+    </table>
+    <hr>
+  <p align="center">All About @schoolInfo.city, @schoolInfo.state</p> 
+  <table id="city_table" align="center">
+    <tr>
+		<td>Population</td>
+		<td>@cityInfo.population</td>
+	</tr>
+    <tr>
+		<td>Median Resident Age</td>
+		<td>@cityInfo.medianResidentAge</td>
+	</tr>
+    <tr>
+		<td>Percentage of Residents with a High School Degree</td>
+		<td>@cityInfo.HSDegree%</td>
+	</tr>
+	<tr>
+    	<td>Median Income</td>
+		<td>@cityInfo.medianIncome</td>
+	</tr>
+	<tr>
+   		<td>Percentage of Residents Living Below the Poverty Line</td>
+		<td>@cityInfo.belowPovertyLine%</td>
+	</tr>
+	<tr>
+   		<td>Percentage of Residents Born Outside the US</td>
+		<td>@cityInfo.foreignBorn%</td>
+	</tr>
+	<tr>
+    	<td>Crime Index</td>
+		<td>@cityInfo.crimeIndex</td>
+	</tr>
+  </table>
+  <hr/>
   <p>
       Check out these schools with similar sizes!
       @for(name <- similarSizedSchools) {
