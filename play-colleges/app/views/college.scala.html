@@ -25,7 +25,7 @@
         </div></th>
       </tr>
     </table>
-
+    <div id="degree_section">
     <h3>Top Degrees at @schoolInfo.name</h3>
     <table id="gen">
       <tr>
@@ -42,7 +42,9 @@
         }
       </tr>
     </table>
-    <hr>
+
+    </div>
+
 	<p align="center" id="city_name">All About <b>@schoolInfo.city, @schoolInfo.state</b></p>
   <table id="city_table" align="center">
     <tr>
@@ -75,25 +77,32 @@
 	</tr>
   </table>
   <hr/>
-  <p>
-      Check out these schools with similar sizes!
-      @for(name <- similarSizedSchools) {
-        <li> <a href="@routes.Application.viewSchool(name)"> @name </a> </li>
-      }
-  </p>
-  <p>
-      Check out these schools with similar tuition!
-      @for(name <- similarTuitionSchools) {
-        <li> <a href="@routes.Application.viewSchool(name)"> @name </a> </li>
-      }
-  </p>
-  <p>
-      Check out these schools close by!
-      @for(name <- closeSchools) {
-        <li> <a href="@routes.Application.viewSchool(name)"> @name </a> </li>
-      }
-  </p>
-  <p>
-    Search <a href="@routes.Application.index()">other schools</a>.
-  </p>
+  <table id="similar_schools">
+    <tr>
+    <td>
+        <h6>Check out these schools with similar sizes!</h6>
+        @for(name <- similarSizedSchools) {
+          <li class="school_list"> <a href="@routes.Application.viewSchool(name)"> @name </a> </li>
+        }
+    </td>
+    <td>
+        <h6>Check out these schools with similar tuition!</h6>
+        @for(name <- similarTuitionSchools) {
+          <li class="school_list"> <a href="@routes.Application.viewSchool(name)"> @name </a> </li>
+        }
+    </td>
+    <td>
+        <h6>Check out these schools close by!</h6>
+        @for(name <- closeSchools) {
+          <li class="school_list"> <a href="@routes.Application.viewSchool(name)"> @name </a> </li>
+        }
+    </td>
+    </tr>
+    </table>
+
+    <p id="search_other">
+      Search <a href="@routes.Application.index()">other schools</a>.
+    </p>
+
+
 }
