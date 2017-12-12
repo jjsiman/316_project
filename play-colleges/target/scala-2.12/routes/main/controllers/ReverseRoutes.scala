@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/vagrant/project/316_project/play-colleges/conf/routes
-// @DATE:Mon Dec 11 23:25:59 EST 2017
+// @SOURCE:/vagrant/316_project/play-colleges/conf/routes
+// @DATE:Tue Dec 12 14:20:18 EST 2017
 
 import play.api.mvc.Call
 

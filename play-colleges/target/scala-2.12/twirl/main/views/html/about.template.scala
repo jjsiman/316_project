@@ -41,7 +41,7 @@ Seq[Any](format.raw/*1.19*/("""
   <section id="about_banner">
     <div class="about_inner">
       <h1>About Us</h1>
-      <p>A data driven integrative search to help you find your dream school.</p>
+      <p>Joe Lilien, Guhan Muruganandam, Jack Siman, Grayson Wise</p>
     </div>
   </section>
 
@@ -69,10 +69,10 @@ Seq[Any](format.raw/*1.19*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 11 23:26:00 EST 2017
-                  SOURCE: /vagrant/project/316_project/play-colleges/app/views/about.scala.html
-                  HASH: cb0f9d7e1414f226bffd8fac9714d304cc43e6b3
-                  MATRIX: 948->1|1060->18|1088->21|1104->29|1143->31|1163->33|1202->35|1231->38|1289->70|1303->76|1343->96|1427->154|1441->160|1481->180|2918->1590|2933->1596|2974->1616|3036->1648
+                  DATE: Tue Dec 12 17:16:04 EST 2017
+                  SOURCE: /vagrant/316_project/play-colleges/app/views/about.scala.html
+                  HASH: 530bdeb44de95c033fa7f84ca0aef99486eaa54a
+                  MATRIX: 948->1|1060->18|1088->21|1104->29|1143->31|1163->33|1202->35|1231->38|1289->70|1303->76|1343->96|1427->154|1441->160|1481->180|2906->1578|2921->1584|2962->1604|3024->1636
                   LINES: 28->1|33->1|35->3|35->3|35->3|35->3|35->3|36->4|37->5|37->5|37->5|38->6|38->6|38->6|53->21|53->21|53->21|55->23
                   -- GENERATED --
               */
