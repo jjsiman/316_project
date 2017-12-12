@@ -15,8 +15,9 @@ ul {
 #about_banner {
     align-items: center;
     justify-content: center;
-    padding: 5em 0 0 0;
-    background-image: url("../images/col1.jpg");
+    padding: 4em 0 3em 0;
+    background-image: url("../images/col1.jpg"), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+	background-blend-mode: overlay;
     filter: grey;
     background-position: center;
     background-size: cover;
@@ -40,15 +41,17 @@ ul {
 #about_banner p {
   color: #FFF;
   font-size: 1.75em;
+  padding-bottom: 2em;
 }
 
 #about_info {
   align-items: center;
   justify-content: center;
+  background-color: #eaece5;
 }
 
 #about_info p {
-  padding: 5em 0 4em 0;
+  padding: 2em 14em 0 14em;
 }
 
 #nav {
